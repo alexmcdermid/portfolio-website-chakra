@@ -1,10 +1,11 @@
 import { useColorMode } from '@chakra-ui/color-mode'
 import { Stack, Flex, Box, Text } from '@chakra-ui/layout';
-import { Button } from '@chakra-ui/button';
+import { Button, IconButton } from '@chakra-ui/button';
 import YouTube from 'react-youtube';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiDjango, DiPostgresql, DiGit } from 'react-icons/di'
 import { SiExpress } from 'react-icons/si'
+import { FaGithub, } from 'react-icons/fa'
 import React from 'react'
 
 function Header() {
@@ -90,12 +91,23 @@ function Header() {
                             <Text fontSize='2xl' pb='2%'>Rhyme Time</Text>
                             <Text>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
                             <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
+                            <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/rhymetime")}></IconButton>
+
                         </Box>
                         <Box  w={isNotSmallerScreen ? '550px' : '350px'}   h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
                             <Text fontSize='2xl' pb='2%'>Tigerpins</Text>
+                            <Text>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                            <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
+                            <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/tigerpins")}></IconButton>
+
+
                         </Box>
                         <Box  w={isNotSmallerScreen ? '550px' : '350px'}   h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
                             <Text fontSize='2xl' pb='2%'>Brewfinder</Text>
+                            <Text>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                            <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
+                            <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+
                         </Box>
                         
                     </Flex>
