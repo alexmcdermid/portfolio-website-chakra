@@ -23,13 +23,13 @@ function Header() {
 
     return (
         <Stack>
-            <Flex direction={isNotSmallerScreen ? "row" : "column"} spacing="200px" p={isNotSmallerScreen ? "12" : "0"} align="flex-start">
+            <Flex direction={isNotSmallerScreen ? "row" : "column"} spacing="200px"  align="flex-start">
                 <Box mt={isNotSmallerScreen ? "0" : '4'} align='center'>
                     <Text fontSize="5xl" fontWeight="semibold">Hi, I'm,</Text>
                     <Text fontSize={isNotSmallerScreen ? "7xl" : "6xl"} fontWeight="bold" bgGradient="linear(to-r, orange.400, orange.500, orange.600)" bgClip='text' paddingBottom='1%'>Alexander McDermid</Text>
-                    <Text fontSize={isNotSmallerScreen ? "3xl" : "1xl"} color={isDark ? "gray.200" : "gray.700"} paddingBottom='5%'>A software developer and solution seeker, who works for moments of clarity after solving the last piece of a problem.</Text> 
+                    <Text fontSize={isNotSmallerScreen ? "3xl" : "1xl"} color={isDark ? "gray.200" : "gray.700"} paddingBottom='5%' px={isNotSmallerScreen ? "8" : "2"}>A software developer and solution seeker, who works for moments of clarity after solving the last piece of a problem.</Text> 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Skills</Text>
-                    <Text fontSize={isNotSmallerScreen ? "3xl" : "1xl"} color={isDark ? "gray.200" : "gray.700"} > I specialize in the MERN stack, but excel at many technologies and have a robust background in computer science, data analytics and development.</Text>
+                    <Text fontSize={isNotSmallerScreen ? "3xl" : "1xl"} color={isDark ? "gray.200" : "gray.700"} px={isNotSmallerScreen ? "8" : "2"}> I specialize in the MERN stack, but excel at many technologies and have a robust background in computer science, data analytics and development.</Text>
                     <Flex flexDirection='column' align='center'>
                     <Flex direction='row' spacing="200px"  textAlign='center'  >
                         <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
