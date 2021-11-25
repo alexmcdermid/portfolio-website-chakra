@@ -75,6 +75,21 @@ function Header() {
                     </Flex>
                     </Flex>
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Portfolio</Text>
+                   
+                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap'>
+                        <Box w={isNotSmallerScreen ? '550px' : '350px'} h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
+                            <Text fontSize='2xl' pb='2%'>Rhyme Time</Text>
+                            <Text>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                        </Box>
+                        <Box  w={isNotSmallerScreen ? '550px' : '350px'}   h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
+                            <Text fontSize='2xl' pb='2%'>Tigerpins</Text>
+                        </Box>
+                        <Box  w={isNotSmallerScreen ? '550px' : '350px'}   h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
+                            <Text fontSize='2xl' pb='2%'>Brewfinder</Text>
+                        </Box>
+                        
+                    </Flex>
+
                     {isNotSmallerScreen ? <></> :
                     <Button onClick={()=>{window.scrollTo({top: 0,behavior: "smooth"})}}>Back to top</Button>
                     }
