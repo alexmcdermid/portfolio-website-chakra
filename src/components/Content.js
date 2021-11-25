@@ -1,6 +1,7 @@
 import { useColorMode } from '@chakra-ui/color-mode'
 import { Stack, Flex, Box, Text } from '@chakra-ui/layout';
 import { Button } from '@chakra-ui/button';
+import YouTube from 'react-youtube';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiDjango, DiPostgresql, DiGit } from 'react-icons/di'
 import { SiExpress } from 'react-icons/si'
@@ -11,6 +12,14 @@ function Header() {
     const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+    const opts = {
+        height: isNotSmallerScreen ? '338' : '197',
+        width: isNotSmallerScreen ? '600' : '350',
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 0,
+        },
+      };
 
     return (
         <Stack>
@@ -80,6 +89,7 @@ function Header() {
                         <Box w={isNotSmallerScreen ? '550px' : '350px'} h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
                             <Text fontSize='2xl' pb='2%'>Rhyme Time</Text>
                             <Text>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                            <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
                         </Box>
                         <Box  w={isNotSmallerScreen ? '550px' : '350px'}   h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
                             <Text fontSize='2xl' pb='2%'>Tigerpins</Text>
