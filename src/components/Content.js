@@ -5,7 +5,7 @@ import YouTube from 'react-youtube';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiDjango, DiPostgresql, DiGit } from 'react-icons/di'
 import { SiExpress } from 'react-icons/si'
-import { FaGithub, } from 'react-icons/fa'
+import { FaGithub, FaGlobe } from 'react-icons/fa'
 import React from 'react'
 
 function Header() {
@@ -89,8 +89,8 @@ function Header() {
                         <Box w={isNotSmallerScreen ? '590px' : '350px'} h='550px' rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' m='1%' >
                             <Text fontSize='2xl' p='3%'>Rhyme Time</Text>
                             <Flex justify='space-around' >
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/rhymetime")}></IconButton>
+                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://rhymetimehome.herokuapp.com/")}></IconButton>
                             </Flex>
                             <Text pb='2%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
                             <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
@@ -99,10 +99,10 @@ function Header() {
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'}   h='550px' rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' m='1%'>
                             <Text fontSize='2xl' p='3%'>Tigerpins</Text>
                             <Flex justify='space-around' >
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/tigerpins")}></IconButton>
+                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://tigerpins.herokuapp.com/")}></IconButton>
                             </Flex>
-                            <Text pb='2%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                            <Text pb='2%'>A full-stack web application that allows users to log and recall places visually that they’ve been to, and take a look at places that others users have been to. </Text>
                             <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
 
 
@@ -111,9 +111,9 @@ function Header() {
                             <Text fontSize='2xl' p='3%'>Brewfinder</Text>
                             <Flex justify='space-around' >
                                 <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://brewfinderwebapp.herokuapp.com/")}></IconButton>
                             </Flex>
-                            <Text pb='2%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                            <Text pb='2%'>A full-stack web application that allows users to search cities, states or provinces to find a listing of breweries. </Text>
                             <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
 
                         </Box>
