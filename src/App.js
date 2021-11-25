@@ -10,18 +10,28 @@ function App() {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 
   return (
-    <VStack padding='4'>
-      <Flex w='100%' >
+    <VStack>
+      <Flex w='100%' p='4'>
         <Heading m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400'>
           alex.dev 
         </Heading>
+
         <Spacer/>
         <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
         <IconButton icon={<FaEnvelope/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("mailto:alexander.mcdermid@gmail.com")}></IconButton>
         <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
         <IconButton icon={isDark ? <FaSun/> : <FaMoon/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={toggleColorMode} />
+        
       </Flex>
       <Content/>
+      <Heading m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400' pt=''>
+          contact me 
+        </Heading>
+      <Flex>
+        <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
+        <IconButton icon={<FaEnvelope/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("mailto:alexander.mcdermid@gmail.com")}></IconButton>
+        <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
+      </Flex>
     </VStack>
   );
 }
