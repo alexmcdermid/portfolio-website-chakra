@@ -1,5 +1,6 @@
 import { useColorMode } from '@chakra-ui/color-mode'
 import { Stack, Flex, Box, Text } from '@chakra-ui/layout';
+import { Button } from '@chakra-ui/button';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiDjango, DiPostgresql, DiGit } from 'react-icons/di'
 import { SiExpress } from 'react-icons/si'
@@ -41,7 +42,7 @@ function Header() {
                     </Flex>
                     </Flex>
                     <Flex flexDirection='column' align='center'>
-                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap'>
+                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom='4%'>
                         <Flex flexDirection='column' p='4' align='center'>
                             <DiJavascript size='3em'/>
                             <Text>JavaScript</Text>
@@ -73,6 +74,10 @@ function Header() {
                         
                     </Flex>
                     </Flex>
+                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Portfolio</Text>
+                    {isNotSmallerScreen ? <></> :
+                    <Button onClick={()=>{window.scrollTo({top: 0,behavior: "smooth"})}}>Back to top</Button>
+                    }
                 </Box>
             </Flex>
         </Stack>
