@@ -11,7 +11,7 @@ function App() {
 
   return (
     <VStack padding='4'>
-      <Flex w='100%'>
+      <Flex w='100%' >
         <Heading m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400'>
           alex.dev 
         </Heading>
@@ -21,7 +21,7 @@ function App() {
         <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
         <IconButton icon={isDark ? <FaSun/> : <FaMoon/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={toggleColorMode} />
       </Flex>
-      <Content></Content>
+      <Content/>
     </VStack>
   );
 }
