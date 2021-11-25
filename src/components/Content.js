@@ -93,7 +93,7 @@ function Header() {
                                 <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://rhymetimehome.herokuapp.com/")}></IconButton>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
-                            <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
+                            <YouTube videoId="ufdOikrghik"  opts={opts}/>
 
                         </Box>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'}  h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'>
@@ -103,7 +103,7 @@ function Header() {
                                 <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://tigerpins.herokuapp.com/")}></IconButton>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to log places that they’ve been to, and take a look at places that others users have been to. </Text>
-                            <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
+                            <YouTube videoId="IB2bAzOVM7U"  opts={opts}/>
 
 
                         </Box>
@@ -114,14 +114,14 @@ function Header() {
                                 <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://brewfinderwebapp.herokuapp.com/")}></IconButton>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to search cities, states or provinces to find a listing of breweries and comment on their experiences. </Text>
-                            <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
+                            <YouTube videoId="74zDJUpQe9Q"  opts={opts}/>
 
                         </Box>
                         
                     </Flex>
 
                     
-                    <Button mt='5%' onClick={()=>{window.scrollTo({top: 0,behavior: "smooth"})}}>Back to top</Button>
+                    <Button mt='4%' mb='2%' onClick={()=>{window.scrollTo({top: 0,behavior: "smooth"})}}>Back to top</Button>
                     
                 </Box>
             </Flex>
