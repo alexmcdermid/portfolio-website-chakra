@@ -14,8 +14,7 @@ function Header() {
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
     const opts = {
-        height: isNotSmallerScreen ? '338' : '197',
-        width: isNotSmallerScreen ? '600' : '350',
+        width: isNotSmallerScreen ? '590' : '350',
         playerVars: {
           // https://developers.google.com/youtube/player_parameters
           autoplay: 0,
@@ -87,34 +86,43 @@ function Header() {
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Portfolio</Text>
                    
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap'>
-                        <Box w={isNotSmallerScreen ? '550px' : '350px'} h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
-                            <Text fontSize='2xl' pb='2%'>Rhyme Time</Text>
-                            <Text>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                        <Box w={isNotSmallerScreen ? '590px' : '350px'} h='550px' rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' m='1%' >
+                            <Text fontSize='2xl' p='3%'>Rhyme Time</Text>
+                            <Flex justify='space-around' >
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+                            </Flex>
+                            <Text pb='2%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
                             <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
-                            <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/rhymetime")}></IconButton>
 
                         </Box>
-                        <Box  w={isNotSmallerScreen ? '550px' : '350px'}   h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
-                            <Text fontSize='2xl' pb='2%'>Tigerpins</Text>
-                            <Text>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'}   h='550px' rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' m='1%'>
+                            <Text fontSize='2xl' p='3%'>Tigerpins</Text>
+                            <Flex justify='space-around' >
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+                            </Flex>
+                            <Text pb='2%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
                             <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
-                            <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/tigerpins")}></IconButton>
 
 
                         </Box>
-                        <Box  w={isNotSmallerScreen ? '550px' : '350px'}   h={isNotSmallerScreen ? '700px' : '500px'} rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' mb='5%' p='1%'>
-                            <Text fontSize='2xl' pb='2%'>Brewfinder</Text>
-                            <Text>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'}   h='550px' rounded='10px' overflow='hidden' boxShadow='md' bg='gray.200' m='1%' >
+                            <Text fontSize='2xl' p='3%'>Brewfinder</Text>
+                            <Flex justify='space-around' >
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
+                            </Flex>
+                            <Text pb='2%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
                             <YouTube videoId="S1PM067JtaQ"  opts={opts}/>
-                            <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
 
                         </Box>
                         
                     </Flex>
 
-                    {isNotSmallerScreen ? <></> :
-                    <Button onClick={()=>{window.scrollTo({top: 0,behavior: "smooth"})}}>Back to top</Button>
-                    }
+                    
+                    <Button mt='5%' onClick={()=>{window.scrollTo({top: 0,behavior: "smooth"})}}>Back to top</Button>
+                    
                 </Box>
             </Flex>
         </Stack>
