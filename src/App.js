@@ -27,7 +27,7 @@ function App() {
       <Heading m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400' pt=''>
           contact me 
         </Heading>
-      <Flex>
+      <Flex pb='2%'>
         <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
         <IconButton icon={<FaEnvelope/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("mailto:alexander.mcdermid@gmail.com")}></IconButton>
         <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
