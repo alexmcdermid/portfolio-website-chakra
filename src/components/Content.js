@@ -113,7 +113,7 @@ function Header() {
                                 <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
                                 <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://brewfinderwebapp.herokuapp.com/")}></IconButton>
                             </Flex>
-                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to search cities, states or provinces to find a listing of breweries and comment on their experiences. </Text>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to search cities to find listings of breweries and comment on their experiences. </Text>
                             <YouTube videoId="74zDJUpQe9Q"  opts={opts}/>
 
                         </Box>
