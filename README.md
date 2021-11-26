@@ -3,7 +3,7 @@ This is a portfolio website built using react and chakra ui to house some of my 
 
 ## Getting Started
 
-https://alexmcdermid.dev
+[alexmcdermid.dev](https://alexmcdermid.dev)
 
 ## Technologies used
 
