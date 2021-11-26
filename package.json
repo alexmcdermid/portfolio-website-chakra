@@ -1,6 +1,8 @@
 {
-  "name": "portfolio-site",
+  "name": "alexmcdermid.dev",
+  "homepage": "http://alexmcdermid.dev",
   "version": "0.1.0",
+  "description": "A react portfolio built with chakra ui",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^1.7.2",
