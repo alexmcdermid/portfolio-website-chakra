@@ -36,21 +36,21 @@ function Header() {
                         I specialize in building scalabe and robust web applications. Recently my tools of choice are Ruby on Rails and react, but I excel at many technologies and have a robust background in computer science, data analytics and development.
                     </Text>
                     <Flex flexDirection='column' align='center'>
-                    <Flex direction='row' spacing="200px"  textAlign='center'  >
+                    <Flex direction='row' spacing="200px"  textAlign='center'>
                         <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                            <DiRubyRough size={isNotSmallerScreen ? '6em' : '5em'}/>
+                            <DiRubyRough size={isNotSmallerScreen ? '6em' : '4em'}/>
                             <Text>Ruby</Text>
                         </Flex>
                         <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                            <SiRubyonrails size={isNotSmallerScreen ? '6em' : '5em'}/>
+                            <SiRubyonrails size={isNotSmallerScreen ? '6em' : '4em'}/>
                             <Text>Rails</Text>
                         </Flex>
                         <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                            <DiReact size={isNotSmallerScreen ? '6em' : '5em'}/>
+                            <DiReact size={isNotSmallerScreen ? '6em' : '4em'}/>
                             <Text>React.js</Text>
                         </Flex>
                         <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                            <DiPostgresql size={isNotSmallerScreen ? '6em' : '5em'}/>
+                            <DiPostgresql size={isNotSmallerScreen ? '6em' : '4em'}/>
                             <Text>PostgreSQL</Text>
                         </Flex>
                     </Flex>
