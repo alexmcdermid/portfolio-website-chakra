@@ -33,7 +33,7 @@ function Header() {
                     </Text> 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Skills</Text>
                     <Text fontSize={isNotSmallerScreen ? "3xl" : "1xl"} color={isDark ? "gray.200" : "gray.700"} px={isNotSmallerScreen ? "8" : "2"}>
-                        I specialize in building scalabe and robust web applications. Recently my tools of choice are Ruby on Rails and React, but I excel at many technologies and have a robust background in computer science, data analytics and development.
+                        I specialize in building scalabe and robust web applications. Recently my tools of choice are Ruby on Rails and React, but I excel at many technologies and possess a strong background in computer science, data analytics and development.
                     </Text>
                     <Flex flexDirection='column' align='center'>
                     <Flex direction='row' spacing="200px"  textAlign='center'>
