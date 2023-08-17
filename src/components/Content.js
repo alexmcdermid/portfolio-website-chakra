@@ -91,6 +91,16 @@ function Header() {
                             </Flex>
                         </Flex>
                     </Flex>
+
+                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Blogs</Text>
+
+                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%">
+                        <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
+                            <Text fontSize='3xl' p='2%'>Rails Testing; The Battle of Factories vs Fixtures when using RSpec</Text>
+                            {/* TODO image of blog with entire box click going to Harled blog */}
+                        </Box>
+                    </Flex>
+
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Projects</Text>
                    
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap'>
@@ -125,7 +135,6 @@ function Header() {
                             <YouTube videoId="74zDJUpQe9Q"  opts={opts}/>
 
                         </Box>
-                        
                     </Flex>
 
                     
