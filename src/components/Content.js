@@ -1,6 +1,7 @@
 import { useColorMode } from '@chakra-ui/color-mode'
-import { Stack, Flex, Box, Text } from '@chakra-ui/layout';
+import { Stack, Flex, Box, Text, Link } from '@chakra-ui/layout';
 import { Button, IconButton } from '@chakra-ui/button';
+import { Image } from '@chakra-ui/react/dist/chakra-ui-react.cjs';
 import YouTube from 'react-youtube';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { DiRubyRough, DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiPostgresql, DiGit } from 'react-icons/di'
@@ -95,10 +96,12 @@ function Header() {
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Blogs</Text>
 
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%">
-                        <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
-                            <Text fontSize='3xl' p='2%'>Rails Testing; The Battle of Factories vs Fixtures when using RSpec</Text>
-                            {/* TODO image of blog with entire box click going to Harled blog */}
-                        </Box>
+                        <Link href="https://harled.ca/blog/the_design_of_everyday_things_lessons_learned" isExternal>
+                            <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
+                                <Text fontSize='3xl' p='2%'>Rails Testing; The Battle of Factories vs Fixtures when using RSpec</Text>
+                                <Image src="" alt="Rails Testing Blog Image" />
+                            </Box>
+                        </Link>
                     </Flex>
 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Projects</Text>
