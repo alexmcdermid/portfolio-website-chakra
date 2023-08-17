@@ -36,60 +36,60 @@ function Header() {
                         I specialize in building scalabe and robust web applications. Recently my tools of choice are Ruby on Rails and React, but I excel at many technologies and possess a strong background in computer science, data analytics and development.
                     </Text>
                     <Flex flexDirection='column' align='center'>
-                    <Flex direction='row' spacing="200px"  textAlign='center'>
-                        <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                            <DiRubyRough size={isNotSmallerScreen ? '6em' : '4em'}/>
-                            <Text>Ruby</Text>
+                        <Flex direction='row' spacing="200px"  textAlign='center'>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
+                                <DiRubyRough size={isNotSmallerScreen ? '6em' : '4em'}/>
+                                <Text>Ruby</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
+                                <SiRubyonrails size={isNotSmallerScreen ? '6em' : '4em'}/>
+                                <Text>Rails</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
+                                <DiReact size={isNotSmallerScreen ? '6em' : '4em'}/>
+                                <Text>React.js</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
+                                <DiPostgresql size={isNotSmallerScreen ? '6em' : '4em'}/>
+                                <Text>PostgreSQL</Text>
+                            </Flex>
                         </Flex>
-                        <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                            <SiRubyonrails size={isNotSmallerScreen ? '6em' : '4em'}/>
-                            <Text>Rails</Text>
-                        </Flex>
-                        <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                            <DiReact size={isNotSmallerScreen ? '6em' : '4em'}/>
-                            <Text>React.js</Text>
-                        </Flex>
-                        <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                            <DiPostgresql size={isNotSmallerScreen ? '6em' : '4em'}/>
-                            <Text>PostgreSQL</Text>
-                        </Flex>
-                    </Flex>
                     </Flex>
                     <Flex flexDirection='column' align='center'>
-                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom='4%'>
-                        <Flex flexDirection='column' p='4' align='center'>
-                            <DiJavascript size='3em'/>
-                            <Text>JavaScript</Text>
+                        <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom='4%'>
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <DiJavascript size='3em'/>
+                                <Text>JavaScript</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <DiHtml5 size='3em'/>
+                                <Text>HTML5</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <DiCss3 size='3em'/>
+                                <Text>CSS3</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <DiPython size='3em'/>
+                                <Text>Python</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <BiLogoFlask size='3em'/>
+                                <Text>Flask</Text>
+                            </Flex>   
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <DiMongodb size='3em'/>
+                                <Text>MongoDB</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <DiNodejsSmall size='3em'/>
+                                <Text>Node.js</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <DiGit size='3em'/>
+                                <Text>Git</Text>
+                            </Flex>
                         </Flex>
-                        <Flex flexDirection='column' p='4' align='center'>
-                            <DiHtml5 size='3em'/>
-                            <Text>HTML5</Text>
-                        </Flex>
-                        <Flex flexDirection='column' p='4' align='center'>
-                            <DiCss3 size='3em'/>
-                            <Text>CSS3</Text>
-                        </Flex>
-                        <Flex flexDirection='column' p='4' align='center'>
-                            <DiPython size='3em'/>
-                            <Text>Python</Text>
-                        </Flex>
-                        <Flex flexDirection='column' p='4' align='center'>
-                            <BiLogoFlask size='3em'/>
-                            <Text>Flask</Text>
-                        </Flex>   
-                        <Flex flexDirection='column' p='4' align='center'>
-                            <DiMongodb size='3em'/>
-                            <Text>MongoDB</Text>
-                        </Flex>
-                        <Flex flexDirection='column' p='4' align='center'>
-                            <DiNodejsSmall size='3em'/>
-                            <Text>Node.js</Text>
-                        </Flex>
-                        <Flex flexDirection='column' p='4' align='center'>
-                            <DiGit size='3em'/>
-                            <Text>Git</Text>
-                        </Flex>
-                    </Flex>
                     </Flex>
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Projects</Text>
                    
