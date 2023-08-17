@@ -91,7 +91,7 @@ function Header() {
                         </Flex>
                     </Flex>
                     </Flex>
-                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Portfolio</Text>
+                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Projects</Text>
                    
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap'>
                         <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >

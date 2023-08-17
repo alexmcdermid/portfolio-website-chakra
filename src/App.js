@@ -25,7 +25,7 @@ function App() {
       </Flex>
       <Content/>
       <Heading m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400' pt=''>
-          contact me 
+          Contact me
         </Heading>
       <Flex pb='2%'>
         <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
