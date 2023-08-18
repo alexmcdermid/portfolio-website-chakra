@@ -96,10 +96,18 @@ function Header() {
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Blogs</Text>
 
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%">
-                        <Link href="https://harled.ca/blog/the_design_of_everyday_things_lessons_learned" isExternal>
-                            <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
-                                <Text fontSize='3xl' p='2%'>Rails Testing; The Battle of Factories vs Fixtures when using RSpec</Text>
-                                <Image src="" alt="Rails Testing Blog Image" />
+                        <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" isExternal>
+                            <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '360px' : '360px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
+                                <Text fontSize='3xl' p='2%'>Rails Testing: The Battle of Factories vs Fixtures when using RSpec</Text>
+                                <Text fontSize='xl' p='2%'>A comparison of the pros/cons of using factories vs fixtures for testing Ruby on Rails applications with RSpec.</Text>
+                                <Flex>
+                                    <Image src="harledProfile.jpg" alt=""/>
+                                    <Flex>
+                                        <Text fontSize='xl' p='2%'>Alex McDermid</Text>
+                                        <Text fontSize='xl' p='2%'>August 18th, 2023</Text>
+                                    </Flex>
+                                    <Image src="harledLogo.jpeg" alt=""/>
+                                </Flex>
                             </Box>
                         </Link>
                     </Flex>
