@@ -97,17 +97,22 @@ function Header() {
 
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%">
                         <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" isExternal>
-                            <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '360px' : '360px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
-                                <Text fontSize='3xl' p='2%'>Rails Testing: The Battle of Factories vs Fixtures when using RSpec</Text>
-                                <Text fontSize='xl' p='2%'>A comparison of the pros/cons of using factories vs fixtures for testing Ruby on Rails applications with RSpec.</Text>
-                                <Flex>
-                                    <Image src="harledProfile.jpg" alt=""/>
-                                    <Flex>
-                                        <Text fontSize='xl' p='2%'>Alex McDermid</Text>
-                                        <Text fontSize='xl' p='2%'>August 18th, 2023</Text>
+                            <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
+                                <Flex direction={'column'} justifyContent={'space-between'}>
+                                    <Text fontSize='3xl' p='2%'>Rails Testing: The Battle of Factories vs Fixtures when using RSpec</Text>
+                                    <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A comparison of the pros/cons of using factories vs fixtures for testing Ruby on Rails applications with RSpec.</Text>
+                                    <Flex justify={'space-between'} py={'2%'} px={'6%'}>
+                                        <Flex>
+                                            <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledProfile.jpg" alt="Alex McDermid Harled Work Profile Photo"/>
+                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'}>
+                                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Alex McDermid</Text>
+                                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%' whiteSpace={'nowrap'}>August 18th, 2023</Text>
+                                            </Flex>
+                                        </Flex>
+                                        <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
                                     </Flex>
-                                    <Image src="harledLogo.jpeg" alt=""/>
                                 </Flex>
+
                             </Box>
                         </Link>
                     </Flex>
