@@ -27,7 +27,7 @@ function Header() {
         <Stack>
             <Flex direction={isNotSmallerScreen ? "row" : "column"} spacing="200px" align="flex-start">
                 <Box mt={isNotSmallerScreen ? "0" : '4'} align='center'>
-                    <Text fontSize="5xl" fontWeight="semibold">Hi, I'm,</Text>
+                    <Text fontSize="5xl" fontWeight="semibold">Hi, I'm</Text>
                     <Text fontSize={isNotSmallerScreen ? "7xl" : "6xl"} fontWeight="bold" bgGradient="linear(to-r, orange.400, orange.500, orange.600)" bgClip='text' paddingBottom='1%'>Alexander McDermid</Text>
                     <Text fontSize={isNotSmallerScreen ? "3xl" : "1xl"} color={isDark ? "gray.200" : "gray.700"} paddingBottom='5%' px={isNotSmallerScreen ? "8" : "2"}>
                         A software developer and solution seeker, who works for moments of clarity after solving the last piece of a problem.
