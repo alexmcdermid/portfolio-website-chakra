@@ -4,10 +4,10 @@ import { Button, IconButton } from '@chakra-ui/button';
 import { Image } from '@chakra-ui/react/dist/chakra-ui-react.cjs';
 import YouTube from 'react-youtube';
 import { useMediaQuery } from '@chakra-ui/media-query';
-import { DiRubyRough, DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiPostgresql, DiGit } from 'react-icons/di'
+import { DiRubyRough, DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiPostgresql, DiGit, DiDjango } from 'react-icons/di'
 import { SiRubyonrails } from 'react-icons/si'
 import { BiLogoFlask } from 'react-icons/bi'
-import { FaGithub, FaGlobe } from 'react-icons/fa'
+import { FaGithub, FaGlobe, FaDocker } from 'react-icons/fa'
 import React from 'react'
 
 function Header() {
@@ -77,14 +77,22 @@ function Header() {
                             <Flex flexDirection='column' p='4' align='center'>
                                 <BiLogoFlask size='3em'/>
                                 <Text>Flask</Text>
-                            </Flex>   
+                            </Flex>  
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <DiDjango size='3em'/>
+                                <Text>Django</Text>
+                            </Flex>    
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <DiNodejsSmall size='3em'/>
+                                <Text>Node.js</Text>
+                            </Flex>
                             <Flex flexDirection='column' p='4' align='center'>
                                 <DiMongodb size='3em'/>
                                 <Text>MongoDB</Text>
                             </Flex>
                             <Flex flexDirection='column' p='4' align='center'>
-                                <DiNodejsSmall size='3em'/>
-                                <Text>Node.js</Text>
+                                <FaDocker size='3em'/>
+                                <Text>Docker</Text>
                             </Flex>
                             <Flex flexDirection='column' p='4' align='center'>
                                 <DiGit size='3em'/>
