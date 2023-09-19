@@ -108,7 +108,7 @@ function Header() {
                             <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'>
                                 <Flex direction={'column'} justifyContent={'space-between'}>
                                     <Text fontSize='3xl' p='2%'>Ahoy Deep Dive Part 1: What is Ahoy? And Application Level Optimizations</Text>
-                                    <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Industry standard practices across application, database and infrastructure to optimize Ahoy Events and Visits.</Text>
+                                    <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>An overview of Ahoy and industry standard practices to optimize Ahoy events and visits at the application level.</Text>
                                     <Flex justify={'space-between'} py={'2%'} px={'6%'}>
                                         <Flex>
                                             <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledProfile.jpg" alt="Alex McDermid Harled Work Profile Photo"/>
@@ -126,7 +126,7 @@ function Header() {
                             <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
                                 <Flex direction={'column'} justifyContent={'space-between'}>
                                     <Text fontSize='3xl' p='2%'>Ahoy Deep Dive Part 2: Database Indexing Strategies</Text>
-                                    <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Industry standard practices across application, database and infrastructure to optimize Ahoy Events and Visits.</Text>
+                                    <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>How to optimize Ahoy events and visits at the database and infrastructure levels for performance and scale.</Text>
                                     <Flex justify={'space-between'} py={'2%'} px={'6%'}>
                                         <Flex>
                                             <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledProfile.jpg" alt="Alex McDermid Harled Work Profile Photo"/>
