@@ -18,8 +18,8 @@ function App() {
 
         <Spacer/>
         <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
-        <IconButton icon={<FaEnvelope/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("mailto:alexander.mcdermid@gmail.com")}></IconButton>
         <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
+        <IconButton icon={<FaEnvelope/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("mailto:alexander.mcdermid@gmail.com")}></IconButton>
         <IconButton icon={isDark ? <FaSun/> : <FaMoon/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={toggleColorMode} />
         
       </Flex>
@@ -29,8 +29,8 @@ function App() {
         </Heading>
       <Flex pb='2%'>
         <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
-        <IconButton icon={<FaEnvelope/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("mailto:alexander.mcdermid@gmail.com")}></IconButton>
         <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
+        <IconButton icon={<FaEnvelope/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("mailto:alexander.mcdermid@gmail.com")}></IconButton>
       </Flex>
     </VStack>
   );
