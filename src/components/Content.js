@@ -135,8 +135,7 @@ function Header() {
                                 <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://railestate.herokuapp.com/")}></IconButton>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
-                            {/* TODO <YouTube videoId="74zDJUpQe9Q"  opts={opts}/> */}
-
+                            <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
                         </Box>
                     </Flex>
 
@@ -169,7 +168,6 @@ function Header() {
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to search cities to find listings of breweries and comment on their experiences. </Text>
                             <YouTube videoId="74zDJUpQe9Q"  opts={opts}/>
-
                         </Box>
                     </Flex>
                     
