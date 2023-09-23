@@ -125,19 +125,23 @@ function Header() {
                         </Link>
                     </Flex>
 
-                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Projects</Text>
-                   
-                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap'>
-                        <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
-                            <Text fontSize='3xl' p='2%'>Rhyme Time</Text>
-                            <Flex justify='space-around' >
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/rhymetime")}></IconButton>
-                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://rhymetimehome.herokuapp.com/")}></IconButton>
-                            </Flex>
-                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
-                            <YouTube videoId="ufdOikrghik"  opts={opts}/>
+                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Current Projects</Text>
 
+                    <Flex direction='row' spacing="200px" p='2' pb={'4%'} textAlign='center' justify='space-around' flexWrap='wrap'>
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                            <Text fontSize='3xl' p='2%'>Railestate</Text>
+                            <Flex justify='space-around' >
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/railestate")}></IconButton>
+                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://railestate.herokuapp.com/")}></IconButton>
+                            </Flex>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
+                            <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
                         </Box>
+                    </Flex>
+
+                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Past Projects</Text>
+
+                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap'>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'}  h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'>
                             <Text fontSize='3xl' p='2%'>Tigerpins</Text>
                             <Flex justify='space-around' >
@@ -146,8 +150,15 @@ function Header() {
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to log places that they’ve been to, and take a look at places that other users have been to. </Text>
                             <YouTube videoId="IB2bAzOVM7U"  opts={opts}/>
-
-
+                        </Box>
+                        <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
+                            <Text fontSize='3xl' p='2%'>Rhyme Time</Text>
+                            <Flex justify='space-around' >
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/rhymetime")}></IconButton>
+                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://rhymetimehome.herokuapp.com/")}></IconButton>
+                            </Flex>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
+                            <YouTube videoId="ufdOikrghik"  opts={opts}/>
                         </Box>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                             <Text fontSize='3xl' p='2%'>Brewfinder</Text>
@@ -157,10 +168,8 @@ function Header() {
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to search cities to find listings of breweries and comment on their experiences. </Text>
                             <YouTube videoId="74zDJUpQe9Q"  opts={opts}/>
-
                         </Box>
                     </Flex>
-
                     
                     <Button mt='4%' mb='2%' onClick={()=>{window.scrollTo({top: 0,behavior: "smooth"})}}>Back to top</Button>
                     
