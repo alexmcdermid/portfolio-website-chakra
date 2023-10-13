@@ -106,15 +106,15 @@ function Header() {
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%">
                         <Link href="https://harled.ca/blog/what_is_ahoy_and_application_level_optimizations" isExternal>
                             <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'>
-                                <Flex direction={'column'} justifyContent={'space-between'} height={'100%'}>
-                                    <Text fontSize='3xl' p='2%'>Ahoy Deep Dive Part 1: What is Ahoy? And Application Level Optimizations</Text>
+                                <Flex direction={'column'} justifyContent={'space-between'} height={'100%'} paddingBlockEnd={'.5em'}>
+                                    <Text fontSize='3xl' p='2%' sx={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Ahoy Deep Dive Part 1: What is Ahoy? And Application Level Optimizations</Text>
                                     <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>An overview of Ahoy and industry standard practices to optimize Ahoy events and visits at the application level.</Text>
                                     <Flex justify={'space-between'} py={'2%'} px={'6%'}>
                                         <Flex>
                                             <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledProfile.jpg" alt="Alex McDermid Harled Work Profile Photo"/>
-                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'}>
+                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'} textAlign={'start'}>
                                                 <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Alex McDermid</Text>
-                                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%' whiteSpace={'nowrap'}>September 16th, 2023</Text>
+                                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%' whiteSpace={{ base: 'normal', md: 'nowrap' }}>September 16th, 2023</Text>
                                             </Flex>
                                         </Flex>
                                         <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
@@ -124,15 +124,15 @@ function Header() {
                         </Link>
                         <Link href="https://harled.ca/blog/database_indexing_strategies" isExternal>
                             <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
-                                <Flex direction={'column'} justifyContent={'space-between'} height={'100%'}>
-                                    <Text fontSize='3xl' p='2%'>Ahoy Deep Dive Part 2: Database Indexing Strategies</Text>
+                                <Flex direction={'column'} justifyContent={'space-between'} height={'100%'} paddingBlockEnd={'.5em'}>
+                                    <Text fontSize='3xl' p='2%' sx={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Ahoy Deep Dive Part 2: Database Indexing Strategies</Text>
                                     <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>How to optimize Ahoy events and visits at the database and infrastructure levels for performance and scale.</Text>
                                     <Flex justify={'space-between'} py={'2%'} px={'6%'}>
                                         <Flex>
                                             <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledProfile.jpg" alt="Alex McDermid Harled Work Profile Photo"/>
-                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'}>
+                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'} textAlign={'start'}>
                                                 <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Alex McDermid</Text>
-                                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%' whiteSpace={'nowrap'}>September 16th, 2023</Text>
+                                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%' whiteSpace={{ base: 'normal', md: 'nowrap' }}>September 16th, 2023</Text>
                                             </Flex>
                                         </Flex>
                                         <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
@@ -142,15 +142,15 @@ function Header() {
                         </Link>
                         <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" isExternal>
                             <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
-                                <Flex direction={'column'} justifyContent={'space-between'} height={'100%'}>
-                                    <Text fontSize='3xl' p='2%'>Rails Testing: The Battle of Factories vs Fixtures when using RSpec</Text>
+                                <Flex direction={'column'} justifyContent={'space-between'} height={'100%'} paddingBlockEnd={'.5em'}>
+                                    <Text fontSize='3xl' p='2%' sx={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Rails Testing: The Battle of Factories vs Fixtures when using RSpec</Text>
                                     <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A comparison of the pros/cons of using factories vs fixtures for testing Ruby on Rails applications with RSpec.</Text>
                                     <Flex justify={'space-between'} py={'2%'} px={'6%'}>
                                         <Flex>
                                             <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledProfile.jpg" alt="Alex McDermid Harled Work Profile Photo"/>
-                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'}>
+                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'} textAlign={'start'}>
                                                 <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Alex McDermid</Text>
-                                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%' whiteSpace={'nowrap'}>August 18th, 2023</Text>
+                                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%' whiteSpace={{ base: 'normal', md: 'nowrap' }}>August 18th, 2023</Text>
                                             </Flex>
                                         </Flex>
                                         <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
