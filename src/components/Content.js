@@ -142,7 +142,7 @@ function Header() {
                         </Link>
                         <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" isExternal>
                             <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
-                                <Flex direction={'column'} justifyContent={'space-between'}>https://harled.ca/blog/database_indexing_strategies
+                                <Flex direction={'column'} justifyContent={'space-between'}>
                                     <Text fontSize='3xl' p='2%'>Rails Testing: The Battle of Factories vs Fixtures when using RSpec</Text>
                                     <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A comparison of the pros/cons of using factories vs fixtures for testing Ruby on Rails applications with RSpec.</Text>
                                     <Flex justify={'space-between'} py={'2%'} px={'6%'}>
