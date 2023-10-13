@@ -104,7 +104,7 @@ function Header() {
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Blogs</Text>
 
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%">
-                        <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" isExternal>
+                        <Link href="https://harled.ca/blog/what_is_ahoy_and_application_level_optimizations" isExternal>
                             <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'>
                                 <Flex direction={'column'} justifyContent={'space-between'}>
                                     <Text fontSize='3xl' p='2%'>Ahoy Deep Dive Part 1: What is Ahoy? And Application Level Optimizations</Text>
@@ -122,7 +122,7 @@ function Header() {
                                 </Flex>
                             </Box>
                         </Link>
-                        <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" isExternal>
+                        <Link href="https://harled.ca/blog/database_indexing_strategies" isExternal>
                             <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
                                 <Flex direction={'column'} justifyContent={'space-between'}>
                                     <Text fontSize='3xl' p='2%'>Ahoy Deep Dive Part 2: Database Indexing Strategies</Text>
@@ -142,7 +142,7 @@ function Header() {
                         </Link>
                         <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" isExternal>
                             <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
-                                <Flex direction={'column'} justifyContent={'space-between'}>
+                                <Flex direction={'column'} justifyContent={'space-between'}>https://harled.ca/blog/database_indexing_strategies
                                     <Text fontSize='3xl' p='2%'>Rails Testing: The Battle of Factories vs Fixtures when using RSpec</Text>
                                     <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A comparison of the pros/cons of using factories vs fixtures for testing Ruby on Rails applications with RSpec.</Text>
                                     <Flex justify={'space-between'} py={'2%'} px={'6%'}>
