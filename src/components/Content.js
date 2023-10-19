@@ -178,7 +178,7 @@ function Header() {
                                 <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge")}></IconButton>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository contains a web application that tracks and manages mock Web Applications developed by the Province of BC.</Text>
-                            <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
+                            <YouTube videoId="5EXRuzREMCc"  opts={opts}/>
                         </Box>
                     </Flex>
 
