@@ -172,6 +172,14 @@ function Header() {
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
                             <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
                         </Box>
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                            <Text fontSize='3xl' p='2%'>IS24 Challenge</Text>
+                            <Flex justify='space-around' >
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge")}></IconButton>
+                            </Flex>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository contains a web application that tracks and manages mock Web Applications developed by the Province of BC.</Text>
+                            <YouTube videoId="5EXRuzREMCc"  opts={opts}/>
+                        </Box>
                     </Flex>
 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Past Projects</Text>
