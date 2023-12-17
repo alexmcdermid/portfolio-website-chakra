@@ -5,9 +5,9 @@ import { Image } from '@chakra-ui/react/dist/chakra-ui-react.cjs';
 import YouTube from 'react-youtube';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { DiRubyRough, DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiPostgresql, DiGit, DiDjango } from 'react-icons/di'
-import { SiRubyonrails } from 'react-icons/si'
+import { SiOracle, SiRubyonrails, SiSpringboot, SiVuedotjs } from 'react-icons/si'
 import { BiLogoFlask } from 'react-icons/bi'
-import { FaGithub, FaGlobe, FaDocker } from 'react-icons/fa'
+import { FaGithub, FaGlobe, FaDocker, FaJava } from 'react-icons/fa'
 import React from 'react'
 
 function Header() {
@@ -75,20 +75,36 @@ function Header() {
                                 <Text>Python</Text>
                             </Flex>
                             <Flex flexDirection='column' p='4' align='center'>
+                                <FaJava size='3em'/>
+                                <Text>Java</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p='4' align='center'>
                                 <BiLogoFlask size='3em'/>
                                 <Text>Flask</Text>
                             </Flex>  
                             <Flex flexDirection='column' p='4' align='center'>
                                 <DiDjango size='3em'/>
                                 <Text>Django</Text>
-                            </Flex>    
+                            </Flex>   
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <SiSpringboot size='3em'/>
+                                <Text>Springboot</Text>
+                            </Flex>   
                             <Flex flexDirection='column' p='4' align='center'>
                                 <DiNodejsSmall size='3em'/>
                                 <Text>Node.js</Text>
                             </Flex>
                             <Flex flexDirection='column' p='4' align='center'>
+                                <SiVuedotjs size='3em'/>
+                                <Text>Vue.js</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p='4' align='center'>
                                 <DiMongodb size='3em'/>
                                 <Text>MongoDB</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p='4' align='center'>
+                                <SiOracle size='3em'/>
+                                <Text>Orcale DB</Text>
                             </Flex>
                             <Flex flexDirection='column' p='4' align='center'>
                                 <FaDocker size='3em'/>
@@ -104,8 +120,8 @@ function Header() {
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Blogs</Text>
 
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%">
-                        <Link href="https://harled.ca/blog/what_is_ahoy_and_application_level_optimizations" isExternal>
-                            <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'>
+                        <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'>
+                            <Link href="https://harled.ca/blog/what_is_ahoy_and_application_level_optimizations" _focus={{ outline: 'none' }} isExternal>
                                 <Flex direction={'column'} justifyContent={'space-between'} height={'100%'} paddingBlockEnd={'.5em'}>
                                     <Text fontSize='3xl' p='2%' sx={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Ahoy Deep Dive Part 1: What is Ahoy? And Application Level Optimizations</Text>
                                     <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>An overview of Ahoy and industry standard practices to optimize Ahoy events and visits at the application level.</Text>
@@ -120,10 +136,10 @@ function Header() {
                                         <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
                                     </Flex>
                                 </Flex>
-                            </Box>
-                        </Link>
-                        <Link href="https://harled.ca/blog/database_indexing_strategies" isExternal>
-                            <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
+                            </Link>
+                        </Box>
+                        <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
+                            <Link href="https://harled.ca/blog/database_indexing_strategies" _focus={{ outline: 'none' }} isExternal>
                                 <Flex direction={'column'} justifyContent={'space-between'} height={'100%'} paddingBlockEnd={'.5em'}>
                                     <Text fontSize='3xl' p='2%' sx={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Ahoy Deep Dive Part 2: Database Indexing Strategies</Text>
                                     <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>How to optimize Ahoy events and visits at the database and infrastructure levels for performance and scale.</Text>
@@ -138,10 +154,10 @@ function Header() {
                                         <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
                                     </Flex>
                                 </Flex>
-                            </Box>
-                        </Link>
-                        <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" isExternal>
-                            <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
+                            </Link>
+                        </Box>
+                        <Box w={isNotSmallerScreen ? '590px' : '360px'} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='2%' shadow='xl'  >
+                            <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" _focus={{ outline: 'none' }} isExternal>
                                 <Flex direction={'column'} justifyContent={'space-between'} height={'100%'} paddingBlockEnd={'.5em'}>
                                     <Text fontSize='3xl' p='2%' sx={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Rails Testing: The Battle of Factories vs Fixtures when using RSpec</Text>
                                     <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A comparison of the pros/cons of using factories vs fixtures for testing Ruby on Rails applications with RSpec.</Text>
@@ -156,8 +172,8 @@ function Header() {
                                         <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
                                     </Flex>
                                 </Flex>
-                            </Box>
-                        </Link>
+                            </Link>
+                        </Box>
                     </Flex>
 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Current Projects</Text>
