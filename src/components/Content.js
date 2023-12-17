@@ -104,7 +104,7 @@ function Header() {
                             </Flex>
                             <Flex flexDirection='column' p='4' align='center'>
                                 <SiOracle size='3em'/>
-                                <Text>Orcale DB</Text>
+                                <Text>OrcaleDB</Text>
                             </Flex>
                             <Flex flexDirection='column' p='4' align='center'>
                                 <FaDocker size='3em'/>
