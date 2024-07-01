@@ -34,7 +34,7 @@ function Header() {
                     </Text> 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Skills</Text>
                     <Text fontSize={isNotSmallerScreen ? "3xl" : "1xl"} color={isDark ? "gray.200" : "gray.700"} px={isNotSmallerScreen ? "8" : "2"}>
-                        I specialize in building scalabe and robust web applications. Currently, my tools of choice are Java (Spring Boot), PostgreSQL and Javascript (Node.js, Vue.js). Previously, I've worked with Ruby on Rails, Python and React. Regardless of the stack, I strive to consistently deliver high-quality results, drawing on my background in computer science, data analytics, and development.
+                        I specialize in building scalable and robust web applications. Currently, my tools of choice are Java (Spring Boot), PostgreSQL and JavaScript (Node.js, Vue.js). Previously, I've worked with Ruby on Rails, Python and React. Regardless of the stack, I strive to consistently deliver high-quality results, drawing on my background in computer science, data analytics, and development.
                     </Text>
                     <Flex flexDirection='column' align='center'>
                         <Flex direction='row' spacing="200px"  textAlign='center'>
