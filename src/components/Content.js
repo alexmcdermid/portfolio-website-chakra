@@ -4,8 +4,8 @@ import { Button, IconButton } from '@chakra-ui/button';
 import { Image } from '@chakra-ui/react/dist/chakra-ui-react.cjs';
 import YouTube from 'react-youtube';
 import { useMediaQuery } from '@chakra-ui/media-query';
-import { DiRubyRough, DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiPostgresql, DiGit, DiDjango } from 'react-icons/di'
-import { SiOracle, SiRubyonrails, SiSpringboot, SiVuedotjs } from 'react-icons/si'
+import { DiRubyRough, DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiPostgresql, DiGit, DiDjango, DiJava, DiNodejs, DiRuby } from 'react-icons/di'
+import { SiOracle, SiReact, SiRuby, SiRubyonrails, SiSpringboot, SiVuedotjs } from 'react-icons/si'
 import { BiLogoFlask } from 'react-icons/bi'
 import { FaGithub, FaGlobe, FaDocker, FaJava } from 'react-icons/fa'
 import React from 'react'
@@ -34,84 +34,84 @@ function Header() {
                     </Text> 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Skills</Text>
                     <Text fontSize={isNotSmallerScreen ? "3xl" : "1xl"} color={isDark ? "gray.200" : "gray.700"} px={isNotSmallerScreen ? "8" : "2"}>
-                        I specialize in building scalabe and robust web applications. Recently my tools of choice are Ruby on Rails and React, but I excel at many technologies and possess a strong background in computer science, data analytics and development.
+                        I specialize in building scalabe and robust web applications. Currently, my tools of choice are Java (Spring Boot), PostgreSQL and Javascript (Node.js, Vue.js). Previously, I've worked with Ruby on Rails, Python and React. Regardless of the stack, I strive to consistently deliver high-quality results, drawing on my background in computer science, data analytics, and development.
                     </Text>
                     <Flex flexDirection='column' align='center'>
                         <Flex direction='row' spacing="200px"  textAlign='center'>
                             <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                                <DiRubyRough size={isNotSmallerScreen ? '6em' : '4em'}/>
-                                <Text>Ruby</Text>
+                                <DiJava size={isNotSmallerScreen ? '6em' : '3em'}/>
+                                <Text>Java</Text>
                             </Flex>
                             <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                                <SiRubyonrails size={isNotSmallerScreen ? '6em' : '4em'}/>
-                                <Text>Rails</Text>
+                                <SiSpringboot size={isNotSmallerScreen ? '6em' : '3em'}/>
+                                <Text>Spring Boot</Text>
                             </Flex>
                             <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                                <DiReact size={isNotSmallerScreen ? '6em' : '4em'}/>
-                                <Text>React.js</Text>
+                                <DiNodejs size={isNotSmallerScreen ? '6em' : '3em'}/>
+                                <Text>Node.js</Text>
                             </Flex>
                             <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
-                                <DiPostgresql size={isNotSmallerScreen ? '6em' : '4em'}/>
+                                <SiVuedotjs size={isNotSmallerScreen ? '6em' : '3em'}/>
+                                <Text>Vue.js</Text>
+                            </Flex>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "6" : "2"} align='center'>
+                                <DiPostgresql size={isNotSmallerScreen ? '6em' : '3em'}/>
                                 <Text>PostgreSQL</Text>
                             </Flex>
                         </Flex>
                     </Flex>
                     <Flex flexDirection='column' align='center'>
                         <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom='4%'>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <DiJavascript size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <DiJavascript size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>JavaScript</Text>
                             </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <DiHtml5 size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <DiHtml5 size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>HTML5</Text>
                             </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <DiCss3 size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <DiCss3 size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>CSS3</Text>
                             </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <DiPython size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <DiPython size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>Python</Text>
                             </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <FaJava size='3em'/>
-                                <Text>Java</Text>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <DiRubyRough size={isNotSmallerScreen ? '3em' : '2em'}/>
+                                <Text>Ruby</Text>
                             </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <BiLogoFlask size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <BiLogoFlask size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>Flask</Text>
                             </Flex>  
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <DiDjango size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <DiDjango size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>Django</Text>
                             </Flex>   
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <SiSpringboot size='3em'/>
-                                <Text>Springboot</Text>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <SiRubyonrails size={isNotSmallerScreen ? '3em' : '2em'}/>
+                                <Text>Rails</Text>
                             </Flex>   
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <DiNodejsSmall size='3em'/>
-                                <Text>Node.js</Text>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <SiReact size={isNotSmallerScreen ? '3em' : '2em'}/>
+                                <Text>React.js</Text>
                             </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <SiVuedotjs size='3em'/>
-                                <Text>Vue.js</Text>
-                            </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <DiMongodb size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <DiMongodb size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>MongoDB</Text>
                             </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <SiOracle size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <SiOracle size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>OrcaleDB</Text>
                             </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <FaDocker size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <FaDocker size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>Docker</Text>
                             </Flex>
-                            <Flex flexDirection='column' p='4' align='center'>
-                                <DiGit size='3em'/>
+                            <Flex flexDirection='column' p={isNotSmallerScreen ? "4" : "3"} align='center'>
+                                <DiGit size={isNotSmallerScreen ? '3em' : '2em'}/>
                                 <Text>Git</Text>
                             </Flex>
                         </Flex>
