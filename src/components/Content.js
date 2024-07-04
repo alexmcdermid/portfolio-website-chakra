@@ -4,10 +4,10 @@ import { Button, IconButton } from '@chakra-ui/button';
 import { Image } from '@chakra-ui/react/dist/chakra-ui-react.cjs';
 import YouTube from 'react-youtube';
 import { useMediaQuery } from '@chakra-ui/media-query';
-import { DiRubyRough, DiMongodb, DiReact, DiNodejsSmall, DiHtml5, DiCss3, DiJavascript, DiPython, DiPostgresql, DiGit, DiDjango, DiJava, DiNodejs, DiRuby } from 'react-icons/di'
-import { SiOracle, SiReact, SiRuby, SiRubyonrails, SiSpringboot, SiVuedotjs } from 'react-icons/si'
+import { DiRubyRough, DiMongodb, DiHtml5, DiCss3, DiJavascript, DiPython, DiPostgresql, DiGit, DiDjango, DiJava, DiNodejs } from 'react-icons/di'
+import { SiOracle, SiReact, SiRubyonrails, SiSpringboot, SiVuedotjs } from 'react-icons/si'
 import { BiLogoFlask } from 'react-icons/bi'
-import { FaGithub, FaGlobe, FaDocker, FaJava } from 'react-icons/fa'
+import { FaGithub, FaGlobe, FaDocker } from 'react-icons/fa'
 import React from 'react'
 
 function Header() {
@@ -180,15 +180,6 @@ function Header() {
 
                     <Flex direction='row' spacing="200px" p='2' pb={'4%'} textAlign='center' justify='space-around' flexWrap='wrap'>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
-                            <Text fontSize='3xl' p='2%'>Railestate</Text>
-                            <Flex justify='space-around' >
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/railestate")}></IconButton>
-                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://railestate.herokuapp.com/")}></IconButton>
-                            </Flex>
-                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
-                            <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
-                        </Box>
-                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                             <Text fontSize='3xl' p='2%'>IS24 Challenge</Text>
                             <Flex justify='space-around' >
                                 <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge")}></IconButton>
@@ -199,8 +190,18 @@ function Header() {
                     </Flex>
 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Past Projects</Text>
+                    <Text fontSize={isNotSmallerScreen ? "2xl" : "1xl"} fontWeight="semibold" px={isNotSmallerScreen ? "8" : "2"} paddingBottom='1%'>I've recently taken most of my past projects offline - please check out the repositories to run locally if interested.</Text>
 
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap'>
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                            <Text fontSize='3xl' p='2%'>Railestate</Text>
+                            <Flex justify='space-around' >
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/railestate")}></IconButton>
+                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://railestate.herokuapp.com/")}></IconButton>
+                            </Flex>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
+                            <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
+                        </Box>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'}  h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'>
                             <Text fontSize='3xl' p='2%'>Tigerpins</Text>
                             <Flex justify='space-around' >
