@@ -188,7 +188,7 @@ function Header() {
                                 </Flex>
                                 <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository serves as a tool for selecting a random question similar to those from "Grokking the Coding Interview: Patterns for Coding Questions".</Text>
                             </Box>
-                            <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                            <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                                 <Text fontSize='3xl' p='2%'>IS24 Challenge</Text>
                                 <Flex justify='space-around' >
                                     <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge")}></IconButton>
@@ -203,7 +203,7 @@ function Header() {
                     <Text fontSize={isNotSmallerScreen ? "2xl" : "1xl"} fontWeight="semibold" px={isNotSmallerScreen ? "8" : "2"} paddingBottom='1%'>I've recently taken most of my past projects offline - please check out the repositories to run locally if interested.</Text>
 
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%" rowGap={'8px'}>
-                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                             <Text fontSize='3xl' p='2%'>Railestate</Text>
                             <Flex justify='space-around' >
                                 <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/railestate")}></IconButton>
@@ -212,7 +212,7 @@ function Header() {
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
                             <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
                         </Box>
-                        <Box  w={isNotSmallerScreen ? '590px' : '350px'}  h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'>
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'}  h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'>
                             <Text fontSize='3xl' p='2%'>Tigerpins</Text>
                             <Flex justify='space-around' >
                                 <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/tigerpins")}></IconButton>
@@ -221,7 +221,7 @@ function Header() {
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to log places that they’ve been to, and take a look at places that other users have been to. </Text>
                             <YouTube videoId="IB2bAzOVM7U"  opts={opts}/>
                         </Box>
-                        <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
+                        <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
                             <Text fontSize='3xl' p='2%'>Rhyme Time</Text>
                             <Flex justify='space-around' >
                                 <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/rhymetime")}></IconButton>
@@ -230,7 +230,7 @@ function Header() {
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
                             <YouTube videoId="ufdOikrghik"  opts={opts}/>
                         </Box>
-                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '597px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                             <Text fontSize='3xl' p='2%'>Brewfinder</Text>
                             <Flex justify='space-around' >
                                 <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
