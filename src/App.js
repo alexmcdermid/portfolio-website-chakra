@@ -1,5 +1,5 @@
 import { VStack, Flex, Heading, IconButton, useColorMode, Spacer } from "@chakra-ui/react";
-import {FaSun, FaMoon, FaGithub, FaLinkedin, FaEnvelope} from 'react-icons/fa'
+import {FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useMediaQuery } from '@chakra-ui/media-query';
 import Content from "./components/Content";
 
@@ -19,7 +19,6 @@ function App() {
         <Spacer/>
         <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
         <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
-        <IconButton icon={<FaEnvelope/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("mailto:alexander.mcdermid@alumni.ubc.ca")}></IconButton>
         <IconButton icon={isDark ? <FaSun/> : <FaMoon/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={toggleColorMode} />
         
       </Flex>
@@ -30,7 +29,6 @@ function App() {
       <Flex pb='2%'>
         <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
         <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
-        <IconButton icon={<FaEnvelope/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("mailto:alexander.mcdermid@alumni.ubc.ca")}></IconButton>
       </Flex>
     </VStack>
   );
