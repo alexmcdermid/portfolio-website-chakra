@@ -211,7 +211,7 @@ function Header() {
                         </Box>
                         <Flex direction='column' spacing="200px" textAlign='center' justify='space-around' flexWrap='wrap' gap={isNotSmallerScreen ? '30px' : '8px'}>
                             <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '254px' : '258px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
-                                <Text fontSize='3xl' p='2%'>Grokking the Coding Interview Randomizer</Text>
+                                <Text fontSize='3xl' p='2%'>Grok the Coding Interview Randomizer</Text>
                                 <Flex justify='space-around' >
                                     <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://github.com/alexmcdermid/real-estate-quest")}></IconButton>
                                     <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://bcrealestatequest.ca/")}></IconButton>
