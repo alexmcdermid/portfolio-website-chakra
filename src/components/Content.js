@@ -178,31 +178,20 @@ function Header() {
 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Current Projects</Text>
 
-                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%">
+                    <Flex direction='row' spacing="200px" p='2' pb='0' textAlign='center' justify='space-around' flexWrap='wrap'>
                         <Flex direction='column' spacing="200px" textAlign='center' justify='space-around' flexWrap='wrap' gap={isNotSmallerScreen ? '30px' : '8px'}>
-                            <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '254px' : '258px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
-                                <Text fontSize='3xl' p='2%'>Grok the Coding Interview Randomizer</Text>
+                            <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '274px' : '258px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                                <Text fontSize='3xl' p='2%'>Real Estate Quest BC</Text>
                                 <Flex justify='space-around' >
-                                    <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://github.com/alexmcdermid/grokkingTheCodingInterviewRandomizer")}></IconButton>
-                                    <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://grokking-the-coding-interview-randomizer.vercel.app/")}></IconButton>
+                                    <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://github.com/alexmcdermid/real-estate-quest")}></IconButton>
+                                    <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://bcrealestatequest.ca/")}></IconButton>
                                 </Flex>
-                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository serves as a tool for selecting a random question similar to those from "Grokking the Coding Interview: Patterns for Coding Questions".</Text>
-                            </Box>
-                            <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
-                                <Text fontSize='3xl' p='2%'>IS24 Challenge</Text>
-                                <Flex justify='space-around' >
-                                    <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge")}></IconButton>
-                                </Flex>
-                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository contains a web application that tracks and manages mock Web Applications developed by the Province of BC.</Text>
-                                <YouTube videoId="5EXRuzREMCc"  opts={opts}/>
+                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Real Estate Quest is a web application designed to help users prepare for the British Columbia real estate licensing exam. I used this project to explore Stripe integration for subscriptions and payments.</Text>
                             </Box>
                         </Flex>
                     </Flex>
 
-                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Past Projects</Text>
-                    <Text fontSize={isNotSmallerScreen ? "2xl" : "1xl"} fontWeight="semibold" px={isNotSmallerScreen ? "8" : "2"} paddingBottom='1%'>I've recently taken most of my past projects offline - please check out the repositories to run locally if interested.</Text>
-
-                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%" rowGap={'8px'}>
+                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%" rowGap={'4px'}>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                             <Text fontSize='3xl' p='2%'>Railestate</Text>
                             <Flex justify='space-around' >
@@ -212,6 +201,30 @@ function Header() {
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
                             <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
                         </Box>
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                            <Text fontSize='3xl' p='2%'>IS24 Challenge</Text>
+                            <Flex justify='space-around' >
+                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge")}></IconButton>
+                            </Flex>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository contains a web application that tracks and manages mock Web Applications developed by the Province of BC.</Text>
+                            <YouTube videoId="5EXRuzREMCc"  opts={opts}/>
+                        </Box>
+                        <Flex direction='column' spacing="200px" textAlign='center' justify='space-around' flexWrap='wrap' gap={isNotSmallerScreen ? '30px' : '8px'}>
+                            <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '254px' : '258px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                                <Text fontSize='3xl' p='2%'>Grokking the Coding Interview Randomizer</Text>
+                                <Flex justify='space-around' >
+                                    <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://github.com/alexmcdermid/real-estate-quest")}></IconButton>
+                                    <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://bcrealestatequest.ca/")}></IconButton>
+                                </Flex>
+                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository serves as a tool for selecting a random question similar to those from "Grokking the Coding Interview: Patterns for Coding Questions".</Text>
+                            </Box>
+                        </Flex>
+                    </Flex>
+
+                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Past Projects</Text>
+                    <Text fontSize={isNotSmallerScreen ? "2xl" : "1xl"} fontWeight="semibold" px={isNotSmallerScreen ? "8" : "2"} paddingBottom='1%'>I've recently taken most of my past projects offline - please check out the repositories to run locally if interested.</Text>
+
+                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%" rowGap={'4px'}>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'}  h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'>
                             <Text fontSize='3xl' p='2%'>Tigerpins</Text>
                             <Flex justify='space-around' >
