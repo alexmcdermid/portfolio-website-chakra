@@ -213,8 +213,8 @@ function Header() {
                             <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '254px' : '258px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                                 <Text fontSize='3xl' p='2%'>Grok the Coding Interview Randomizer</Text>
                                 <Flex justify='space-around' >
-                                    <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://github.com/alexmcdermid/real-estate-quest")}></IconButton>
-                                    <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://bcrealestatequest.ca/")}></IconButton>
+                                    <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://github.com/alexmcdermid/grokkingTheCodingInterviewRandomizer")}></IconButton>
+                                    <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://grokking-the-coding-interview-randomizer.vercel.app")}></IconButton>
                                 </Flex>
                                 <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository serves as a tool for selecting a random question similar to those from "Grokking the Coding Interview: Patterns for Coding Questions".</Text>
                             </Box>
