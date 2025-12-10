@@ -34,7 +34,7 @@ function Header() {
                     </Text> 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Skills</Text>
                     <Text fontSize={isNotSmallerScreen ? "3xl" : "1xl"} color={isDark ? "gray.200" : "gray.700"} px={isNotSmallerScreen ? "8" : "2"}>
-                        I specialize in building scalable and robust web applications. Currently, my tools of choice are Java (Spring Boot), PostgreSQL and JavaScript (Node.js, Vue.js). Previously, I've worked with Ruby on Rails, Python and React. Regardless of stack, I strive to consistently deliver high-quality results, drawing on my background in computer science, data analytics, and development.
+                        I specialize in building and scaling data-intensive distributed systems across the full development lifecycle. Currently, my tools of choice are Java (Spring Boot), PostgreSQL and JavaScript (Node.js, Vue.js). Previously, I've worked with Ruby on Rails, Python and React. Regardless of stack, I strive to consistently deliver high-quality results, drawing on my background in computer science, data analytics, and development.
                     </Text>
                     <Flex flexDirection='column' align='center'>
                         <Flex direction='row' spacing="200px"  textAlign='center'>
@@ -186,7 +186,7 @@ function Header() {
                                     <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://github.com/alexmcdermid/real-estate-quest")}></IconButton>
                                     <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://bcrealestatequest.ca/")}></IconButton>
                                 </Flex>
-                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Real Estate Quest is a web application designed to help users prepare for the British Columbia real estate licensing exam. I used this project to explore Stripe integration for subscriptions and payments.</Text>
+                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Real Estate Quest is a web application designed to help users prepare for the British Columbia Real Estate licensing exam. I used this project to explore Stripe integration for subscriptions and payments.</Text>
                             </Box>
                         </Flex>
                     </Flex>
