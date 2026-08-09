@@ -188,7 +188,7 @@ function Header() {
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : 'xl'} p='2%'>A full-stack trading journal for recording stock and option trades, tracking realized profit and loss, and reviewing performance through dashboards and monthly calendars.</Text>
                             <Link href="https://www.tradelog.ca/" aria-label="Open TradeLog website" isExternal mt='auto'>
-                                <Image w='100%' h={isNotSmallerScreen ? '332px' : '197px'} objectFit='cover' src="tradelog-homepage.jpg" alt="TradeLog trading dashboard homepage" loading="lazy"/>
+                                <Image w='100%' h={isNotSmallerScreen ? '332px' : '197px'} objectFit='cover' src="tradelog-homepage.jpg" alt="TradeLog trading dashboard homepage" loading="lazy" filter={isDark ? 'invert(0.9) hue-rotate(180deg) brightness(1.05) contrast(1.05)' : 'none'} transition='filter 0.25s ease'/>
                             </Link>
                         </Box>
                         <Box w={isNotSmallerScreen ? '590px' : '350px'} minH={isNotSmallerScreen ? '590px' : '470px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' display='flex' flexDirection='column'>
@@ -199,7 +199,7 @@ function Header() {
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : 'xl'} p='2%'>Real Estate Quest is a web application designed to help users prepare for the British Columbia Real Estate licensing exam. I used this project to explore Stripe integration for subscriptions and payments.</Text>
                             <Link href="https://bcrealestatequest.ca/" aria-label="Open Real Estate Quest website" isExternal mt='auto'>
-                                <Image w='100%' h={isNotSmallerScreen ? '332px' : '197px'} objectFit='cover' src="real-estate-quest-homepage.jpg" alt="Real Estate Quest BC homepage" loading="lazy"/>
+                                <Image w='100%' h={isNotSmallerScreen ? '332px' : '197px'} objectFit='cover' src={isDark ? 'real-estate-quest-homepage-dark.jpg' : 'real-estate-quest-homepage.jpg'} alt="Real Estate Quest BC homepage" loading="lazy"/>
                             </Link>
                         </Box>
                     </Flex>
