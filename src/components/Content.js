@@ -178,7 +178,7 @@ function Header() {
 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Current Projects</Text>
 
-                    <Flex direction='row' spacing="200px" p='2' pb='0' textAlign='center' justify='space-around' align='stretch' flexWrap='wrap' rowGap='24px'>
+                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' align='stretch' flexWrap='wrap' paddingBottom="4%" rowGap='24px'>
                         <Box w={isNotSmallerScreen ? '590px' : '350px'} minH={isNotSmallerScreen ? '590px' : '470px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' display='flex' flexDirection='column'>
                             <Text fontSize='3xl' p='2%'>TradeLog</Text>
                             <Flex justify='center' align='center' gap={isNotSmallerScreen ? '4' : '2'} px='2%'>
