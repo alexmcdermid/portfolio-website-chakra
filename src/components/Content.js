@@ -178,76 +178,90 @@ function Header() {
 
                     <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Current Projects</Text>
 
-                    <Flex direction='row' spacing="200px" p='2' pb='0' textAlign='center' justify='space-around' flexWrap='wrap'>
-                        <Flex direction='column' spacing="200px" textAlign='center' justify='space-around' flexWrap='wrap' gap={isNotSmallerScreen ? '30px' : '8px'}>
-                            <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '274px' : '258px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
-                                <Text fontSize='3xl' p='2%'>Real Estate Quest BC</Text>
-                                <Flex justify='space-around' >
-                                    <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://github.com/alexmcdermid/real-estate-quest")}></IconButton>
-                                    <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://bcrealestatequest.ca/")}></IconButton>
-                                </Flex>
-                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Real Estate Quest is a web application designed to help users prepare for the British Columbia Real Estate licensing exam. I used this project to explore Stripe integration for subscriptions and payments.</Text>
-                            </Box>
-                        </Flex>
+                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' align='stretch' flexWrap='wrap' paddingBottom="4%" rowGap='24px'>
+                        <Box w={isNotSmallerScreen ? '590px' : '350px'} minH={isNotSmallerScreen ? '590px' : '470px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' display='flex' flexDirection='column'>
+                            <Text fontSize='3xl' p='2%'>TradeLog</Text>
+                            <Flex justify='center' align='center' gap={isNotSmallerScreen ? '4' : '2'} px='2%'>
+                                <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://github.com/alexmcdermid/tradingView")}>Frontend</Button>
+                                <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://github.com/alexmcdermid/transaction-api")}>API</Button>
+                                <IconButton aria-label='Open TradeLog website' icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.tradelog.ca/")}></IconButton>
+                            </Flex>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : 'xl'} p='2%'>A full-stack trading journal for recording stock and option trades, tracking realized profit and loss, and reviewing performance through dashboards and monthly calendars.</Text>
+                            <Link href="https://www.tradelog.ca/" aria-label="Open TradeLog website" isExternal mt='auto'>
+                                <Image w='100%' h={isNotSmallerScreen ? '332px' : '197px'} objectFit='cover' src={isDark ? 'tradelog-homepage-dark.jpg' : 'tradelog-homepage.jpg'} alt="TradeLog trading dashboard homepage" loading="lazy"/>
+                            </Link>
+                        </Box>
+                        <Box w={isNotSmallerScreen ? '590px' : '350px'} minH={isNotSmallerScreen ? '590px' : '470px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' display='flex' flexDirection='column'>
+                            <Text fontSize='3xl' p='2%'>Real Estate Quest BC</Text>
+                            <Flex justify='center' align='center' gap={isNotSmallerScreen ? '8' : '4'} px='2%'>
+                                <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://github.com/alexmcdermid/real-estate-quest")}>GitHub</Button>
+                                <IconButton aria-label='Open Real Estate Quest website' icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://bcrealestatequest.ca/")}></IconButton>
+                            </Flex>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : 'xl'} p='2%'>Real Estate Quest is a web application designed to help users prepare for the British Columbia Real Estate licensing exam. I used this project to explore Stripe integration for subscriptions and payments.</Text>
+                            <Link href="https://bcrealestatequest.ca/" aria-label="Open Real Estate Quest website" isExternal mt='auto'>
+                                <Image w='100%' h={isNotSmallerScreen ? '332px' : '197px'} objectFit='cover' src={isDark ? 'real-estate-quest-homepage-dark.jpg' : 'real-estate-quest-homepage.jpg'} alt="Real Estate Quest BC homepage" loading="lazy"/>
+                            </Link>
+                        </Box>
                     </Flex>
+
+                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Past Projects</Text>
+                    <Text fontSize={isNotSmallerScreen ? "2xl" : "1xl"} fontWeight="semibold" px={isNotSmallerScreen ? "8" : "2"} paddingBottom='1%'>These projects are no longer actively maintained, but they remain deployed and available to explore.</Text>
 
                     <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%" rowGap={'4px'}>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                             <Text fontSize='3xl' p='2%'>Railestate</Text>
-                            <Flex justify='space-around' >
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/railestate")}></IconButton>
-                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://railestate.herokuapp.com/")}></IconButton>
+                            <Flex justify='center' align='center' gap={isNotSmallerScreen ? '8' : '4'}>
+                                <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://www.github.com/alexmcdermid/railestate")}>GitHub</Button>
+                                <IconButton aria-label='Open Railestate website' icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://railestate.herokuapp.com/")}></IconButton>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
                             <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
                         </Box>
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' display='flex' flexDirection='column'>
+                            <Text fontSize='3xl' p='2%'>Grok the Coding Interview Randomizer</Text>
+                            <Flex justify='center' align='center' gap={isNotSmallerScreen ? '8' : '4'}>
+                                <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://github.com/alexmcdermid/grokkingTheCodingInterviewRandomizer")}>GitHub</Button>
+                                <IconButton aria-label='Open Grok the Coding Interview Randomizer website' icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://grokking-the-coding-interview-randomizer.vercel.app")}></IconButton>
+                            </Flex>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Filter interview practice questions by coding pattern and difficulty, select a random LeetCode problem, and track completion after signing in.</Text>
+                            <Link href="https://grokking-the-coding-interview-randomizer.vercel.app" aria-label="Open Grok the Coding Interview Randomizer website" isExternal mt='auto'>
+                                <Image w='100%' h={isNotSmallerScreen ? '332px' : '197px'} objectFit='cover' src={isDark ? 'grok-randomizer-dark.jpg' : 'grok-randomizer.jpg'} alt="Grok coding interview randomizer with category and difficulty filters" loading="lazy"/>
+                            </Link>
+                        </Box>
+                    </Flex>
+
+                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Archived Projects</Text>
+                    <Text fontSize={isNotSmallerScreen ? "2xl" : "1xl"} fontWeight="semibold" px={isNotSmallerScreen ? "8" : "2"} paddingBottom='1%'>These projects are no longer deployed. Their repositories and recorded demos remain available if you'd like to explore the work.</Text>
+
+                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%" rowGap={'4px'}>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                             <Text fontSize='3xl' p='2%'>IS24 Challenge</Text>
-                            <Flex justify='space-around' >
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge")}></IconButton>
+                            <Flex justify='center' align='center'>
+                                <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge")}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository contains a web application that tracks and manages mock Web Applications developed by the Province of BC.</Text>
                             <YouTube videoId="5EXRuzREMCc"  opts={opts}/>
                         </Box>
-                        <Flex direction='column' spacing="200px" textAlign='center' justify='space-around' flexWrap='wrap' gap={isNotSmallerScreen ? '30px' : '8px'}>
-                            <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '254px' : '258px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
-                                <Text fontSize='3xl' p='2%'>Grok the Coding Interview Randomizer</Text>
-                                <Flex justify='space-around' >
-                                    <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://github.com/alexmcdermid/grokkingTheCodingInterviewRandomizer")}></IconButton>
-                                    <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://grokking-the-coding-interview-randomizer.vercel.app")}></IconButton>
-                                </Flex>
-                                <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository serves as a tool for selecting a random question similar to those from "Grokking the Coding Interview: Patterns for Coding Questions".</Text>
-                            </Box>
-                        </Flex>
-                    </Flex>
-
-                    <Text fontSize="4xl" fontWeight="semibold" paddingBottom='1%'>Past Projects</Text>
-                    <Text fontSize={isNotSmallerScreen ? "2xl" : "1xl"} fontWeight="semibold" px={isNotSmallerScreen ? "8" : "2"} paddingBottom='1%'>I've recently taken most of my past projects offline - please check out the repositories to run locally if interested.</Text>
-
-                    <Flex direction='row' spacing="200px" p='2' textAlign='center' justify='space-around' flexWrap='wrap' paddingBottom="4%" rowGap={'4px'}>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'}  h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'>
                             <Text fontSize='3xl' p='2%'>Tigerpins</Text>
-                            <Flex justify='space-around' >
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/tigerpins")}></IconButton>
-                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://tigerpin.herokuapp.com/")}></IconButton>
+                            <Flex justify='center' align='center'>
+                                <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://www.github.com/alexmcdermid/tigerpins")}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to log places that they’ve been to, and take a look at places that other users have been to. </Text>
                             <YouTube videoId="IB2bAzOVM7U"  opts={opts}/>
                         </Box>
                         <Box w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl'  >
                             <Text fontSize='3xl' p='2%'>Rhyme Time</Text>
-                            <Flex justify='space-around' >
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/rhymetime")}></IconButton>
-                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://rhymetimehome.herokuapp.com/")}></IconButton>
+                            <Flex justify='center' align='center'>
+                                <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://www.github.com/alexmcdermid/rhymetime")}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
                             <YouTube videoId="ufdOikrghik"  opts={opts}/>
                         </Box>
                         <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
                             <Text fontSize='3xl' p='2%'>Brewfinder</Text>
-                            <Flex justify='space-around' >
-                                <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}></IconButton>
-                                <IconButton icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://brewfinderwebapp.herokuapp.com/")}></IconButton>
+                            <Flex justify='center' align='center'>
+                                <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://www.github.com/alexmcdermid/brewfinder")}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>A full-stack web application that allows users to search cities to find listings of breweries and comment on their experiences. </Text>
                             <YouTube videoId="74zDJUpQe9Q"  opts={opts}/>
