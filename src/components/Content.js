@@ -217,13 +217,16 @@ function Header() {
                             <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
                             <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
                         </Box>
-                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '254px' : '258px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' >
+                        <Box  w={isNotSmallerScreen ? '590px' : '350px'} h={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} m='1%' shadow='xl' display='flex' flexDirection='column'>
                             <Text fontSize='3xl' p='2%'>Grok the Coding Interview Randomizer</Text>
                             <Flex justify='center' align='center' gap={isNotSmallerScreen ? '8' : '4'}>
                                 <Button leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} onClick={() => window.open("https://github.com/alexmcdermid/grokkingTheCodingInterviewRandomizer")}>GitHub</Button>
                                 <IconButton aria-label='Open Grok the Coding Interview Randomizer website' icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://grokking-the-coding-interview-randomizer.vercel.app")}></IconButton>
                             </Flex>
-                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>This repository serves as a tool for selecting a random question similar to those from "Grokking the Coding Interview: Patterns for Coding Questions".</Text>
+                            <Text fontSize={isNotSmallerScreen ? '2xl' : '1xl'} p='1%'>Filter interview practice questions by coding pattern and difficulty, select a random LeetCode problem, and track completion after signing in.</Text>
+                            <Link href="https://grokking-the-coding-interview-randomizer.vercel.app" aria-label="Open Grok the Coding Interview Randomizer website" isExternal mt='auto'>
+                                <Image w='100%' h={isNotSmallerScreen ? '332px' : '197px'} objectFit='cover' src={isDark ? 'grok-randomizer-dark.jpg' : 'grok-randomizer.jpg'} alt="Grok coding interview randomizer with category and difficulty filters" loading="lazy"/>
+                            </Link>
                         </Box>
                     </Flex>
 
