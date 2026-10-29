@@ -12,13 +12,13 @@ function App() {
   return (
     <VStack>
       <Flex w='100%' p='4'>
-        <Heading m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400'>
+        <Heading as='span' m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400'>
           alex.dev 
         </Heading>
 
         <Spacer/>
-        <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
-        <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
+        <IconButton as='a' href="https://www.linkedin.com/in/alexmcdermid" target='_blank' rel='noopener noreferrer' aria-label='LinkedIn profile' icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' />
+        <IconButton as='a' href="https://www.github.com/alexmcdermid" target='_blank' rel='noopener noreferrer' aria-label='GitHub profile' icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' />
         <IconButton aria-label={isDark ? 'Use light mode' : 'Use dark mode'} icon={isDark ? <FaSun/> : <FaMoon/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={toggleColorMode} />
         
       </Flex>
@@ -26,9 +26,9 @@ function App() {
       <Heading m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400' pt=''>
           Contact me
         </Heading>
-      <Flex pb='2%'>
-        <IconButton icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.linkedin.com/in/alexmcdermid")}></IconButton>
-        <IconButton icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' onClick={() => window.open("https://www.github.com/alexmcdermid")}></IconButton>
+      <Flex pb='8'>
+        <IconButton as='a' href="https://www.linkedin.com/in/alexmcdermid" target='_blank' rel='noopener noreferrer' aria-label='LinkedIn profile' icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' />
+        <IconButton as='a' href="https://www.github.com/alexmcdermid" target='_blank' rel='noopener noreferrer' aria-label='GitHub profile' icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' />
       </Flex>
     </VStack>
   );
