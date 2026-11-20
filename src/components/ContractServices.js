@@ -86,7 +86,7 @@ function ContractServices() {
                 BC Ministry of Forests · Forestry Digital Services
             </Text>
             <Text fontSize='md' color={isDark ? "gray.200" : "gray.700"} px='4' pb='4'>
-                Recent engagement · Senior Full Stack Developer (contract) · May – Oct 2026
+                Recent engagement · Senior Full Stack Developer (contract) · May 2026 – Current
             </Text>
             <Text fontSize={isNotSmallerScreen ? "xl" : "lg"} maxW='1000px' mx='auto' px='4' pb='6'>
                 I led the technical delivery of the Log Exemption Information System (LEXIS) modernization and applied its identity, deployment, and operational patterns to sister applications.
