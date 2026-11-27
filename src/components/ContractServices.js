@@ -7,6 +7,12 @@ import { SiSpringboot, SiReact, SiOracle, SiOpenid, SiJsonwebtokens, SiKong, SiS
 import { FaKey, FaUserShield, FaLock, FaCode, FaCubes, FaBell, FaBook, FaShieldAlt, FaFileUpload, FaLinkedin, FaGithub } from 'react-icons/fa'
 import React from 'react'
 
+const speedStats = [
+    { value: '13×', label: 'faster to open the largest exemptions', detail: '10.43 s to 0.78 s' },
+    { value: '3×', label: 'faster to open large permits', detail: '3.43 s to 1.16 s' },
+    { value: '< 0.8 s', label: 'to open every exemption tested, from 20 to 81 linked applications', detail: 'Legacy grew from 3.01 s to 10.43 s' },
+]
+
 const workstreams = [
     {
         title: 'Full Stack Rebuild',
@@ -94,6 +100,20 @@ function ContractServices() {
             <Flex justify='center' align='center' gap={isNotSmallerScreen ? '4' : '2'} px='4' pb='10'>
                 <Button as='a' href="https://github.com/bcgov/nr-lexis" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                 <Button as='a' href="https://openapi.apps.gov.bc.ca/?url=https://raw.githubusercontent.com/bcgov/nr-lexis/main/gateway/openapi.yaml" target='_blank' rel='noopener noreferrer' leftIcon={<SiSwagger/>} size={isNotSmallerScreen ? 'lg' : 'md'}>API Docs</Button>
+            </Flex>
+
+            <Text as='h3' fontSize='2xl' fontWeight='semibold' px='4' pb='1'>Faster than legacy LEXIS</Text>
+            <Text fontSize='md' color={isDark ? "gray.400" : "gray.600"} maxW='1000px' mx='auto' px='4' pb='6'>
+                Both systems timed on the same records and test database: median of ten opens per record and system, November 2026.
+            </Text>
+            <Flex wrap='wrap' justify='center' gap='8' w='100%' maxW='1280px' mx='auto' px='4' pb='10' textAlign='center'>
+                {speedStats.map(({ value, label, detail }) => (
+                    <Box key={value} w={{ base: '100%', md: 'calc(33.333% - 1.334rem)' }} px='4' py='6' rounded='10px' borderWidth='1px' borderColor={isDark ? 'gray.600' : 'gray.300'}>
+                        <Text fontSize={isNotSmallerScreen ? '5xl' : '4xl'} fontWeight='bold' lineHeight='1.1' color={isDark ? 'orange.300' : 'orange.600'}>{value}</Text>
+                        <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} pt='2'>{label}</Text>
+                        <Text fontSize='md' color={isDark ? "gray.400" : "gray.600"} pt='1'>{detail}</Text>
+                    </Box>
+                ))}
             </Flex>
 
             <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
