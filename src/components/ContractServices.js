@@ -6,6 +6,7 @@ import { DiJava } from 'react-icons/di'
 import { SiSpringboot, SiReact, SiOracle, SiOpenid, SiJsonwebtokens, SiKong, SiSwagger, SiRedhatopenshift, SiKubernetes, SiGithubactions, SiDocker, SiPrometheus, SiOwasp, SiVault } from 'react-icons/si'
 import { FaKey, FaUserShield, FaLock, FaCode, FaCubes, FaBell, FaBook, FaShieldAlt, FaFileUpload, FaLinkedin, FaGithub } from 'react-icons/fa'
 import React from 'react'
+import LexisOpenTimes from './LexisOpenTimes'
 
 const workstreams = [
     {
@@ -112,6 +113,14 @@ function ContractServices() {
                     </Box>
                 ))}
             </Flex>
+
+            <Text as='h3' fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold' px='4' pt='14' pb='2'>Measured against legacy LEXIS</Text>
+            <Text fontSize={isNotSmallerScreen ? "xl" : "lg"} color={isDark ? "gray.200" : "gray.700"} maxW='1000px' mx='auto' px='4' pb='6'>
+                Legacy LEXIS slows down as records grow. Timed on the same records, the rebuilt application opens them up to 13× faster and stays at about a second or less.
+            </Text>
+            <Box w='100%' maxW='900px' mx='auto' px='4'>
+                <LexisOpenTimes/>
+            </Box>
 
             <Flex direction='column' align='center' gap='4' pt='10' px={isNotSmallerScreen ? "8" : "2"}>
                 <Text fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold'>Have a project that needs a senior full stack developer?</Text>
