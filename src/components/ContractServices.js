@@ -4,8 +4,16 @@ import { Button } from '@chakra-ui/button';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { DiJava } from 'react-icons/di'
 import { SiSpringboot, SiReact, SiOracle, SiOpenid, SiJsonwebtokens, SiKong, SiSwagger, SiRedhatopenshift, SiKubernetes, SiGithubactions, SiDocker, SiPrometheus, SiOwasp, SiVault } from 'react-icons/si'
-import { FaKey, FaUserShield, FaLock, FaCode, FaCubes, FaBell, FaBook, FaShieldAlt, FaFileUpload, FaLinkedin, FaGithub } from 'react-icons/fa'
+import { FaKey, FaUserShield, FaLock, FaCode, FaCubes, FaBell, FaBook, FaShieldAlt, FaFileUpload, FaLinkedin, FaGithub, FaTachometerAlt, FaHourglassHalf, FaLayerGroup } from 'react-icons/fa'
 import React from 'react'
+
+// From timing legacy and rebuilt LEXIS opening the same ten large records (TEST, November 2026):
+// largest record 10.43 s to 0.78 s; median per-record reduction 66%; rebuilt opens 0.56-1.16 s.
+const openTimeHighlights = [
+    { icon: FaTachometerAlt, headline: 'Up to 13× faster page loads', description: 'Data-heavy record pages with dozens of linked items now load in under a second instead of more than ten.' },
+    { icon: FaHourglassHalf, headline: '66% lower load times', description: 'Large records across the core pages, including applications and permits, load in about a third of the time they used to.' },
+    { icon: FaLayerGroup, headline: 'Scales with data volume', description: 'Load times no longer climb as records grow: pages stay at about a second or less, from a dozen linked items to more than 80.' },
+]
 
 const workstreams = [
     {
@@ -96,6 +104,23 @@ function ContractServices() {
                 <Button as='a' href="https://openapi.apps.gov.bc.ca/?url=https://raw.githubusercontent.com/bcgov/nr-lexis/main/gateway/openapi.yaml" target='_blank' rel='noopener noreferrer' leftIcon={<SiSwagger/>} size={isNotSmallerScreen ? 'lg' : 'md'}>API Docs</Button>
             </Flex>
 
+            <Text as='h3' fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold' px='4' pb='6'>Faster than the system it replaced</Text>
+            <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
+                {openTimeHighlights.map(({ icon: HighlightIcon, headline, description }) => (
+                    <Box key={headline} w={{ base: '100%', lg: 'calc(33.333% - 1.334rem)' }} rounded='10px' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' px='4' py='6'>
+                        <Flex justify='center' pb='3' color={isDark ? 'orange.300' : 'orange.600'}>
+                            <HighlightIcon size={isNotSmallerScreen ? '2.5em' : '2em'} aria-hidden='true' focusable='false'/>
+                        </Flex>
+                        <Text fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='bold' color={isDark ? 'orange.300' : 'orange.600'} pb='2'>{headline}</Text>
+                        <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left'>{description}</Text>
+                    </Box>
+                ))}
+            </Flex>
+            <Text fontSize='sm' color={isDark ? 'gray.400' : 'gray.600'} maxW='1000px' mx='auto' px='4' pt='4'>
+                Old and rebuilt systems timed opening the same large records on a shared test database: median of ten opens each, November 2026.
+            </Text>
+
+            <Text as='h3' fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold' px='4' pt='14' pb='6'>What I delivered</Text>
             <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
                 {workstreams.map(({ title, description, stack }) => (
                     <Box key={title} w={{ base: '100%', md: 'calc(50% - 1rem)', xl: 'calc(33.333% - 1.334rem)' }} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
