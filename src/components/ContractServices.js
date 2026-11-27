@@ -104,6 +104,23 @@ function ContractServices() {
                 <Button as='a' href="https://openapi.apps.gov.bc.ca/?url=https://raw.githubusercontent.com/bcgov/nr-lexis/main/gateway/openapi.yaml" target='_blank' rel='noopener noreferrer' leftIcon={<SiSwagger/>} size={isNotSmallerScreen ? 'lg' : 'md'}>API Docs</Button>
             </Flex>
 
+            <Text as='h3' fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold' px='4' pb='6'>Faster than the system it replaced</Text>
+            <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
+                {openTimeHighlights.map(({ icon: HighlightIcon, headline, description }) => (
+                    <Box key={headline} w={{ base: '100%', lg: 'calc(33.333% - 1.334rem)' }} rounded='10px' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' px='4' py='6'>
+                        <Flex justify='center' pb='3' color={isDark ? 'orange.300' : 'orange.600'}>
+                            <HighlightIcon size={isNotSmallerScreen ? '2.5em' : '2em'} aria-hidden='true' focusable='false'/>
+                        </Flex>
+                        <Text fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='bold' color={isDark ? 'orange.300' : 'orange.600'} pb='2'>{headline}</Text>
+                        <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left'>{description}</Text>
+                    </Box>
+                ))}
+            </Flex>
+            <Text fontSize='sm' color={isDark ? 'gray.400' : 'gray.600'} maxW='1000px' mx='auto' px='4' pt='4'>
+                Old and rebuilt systems timed opening the same large records on a shared test database: median of ten opens each, November 2026.
+            </Text>
+
+            <Text as='h3' fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold' px='4' pt='14' pb='6'>What I delivered</Text>
             <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
                 {workstreams.map(({ title, description, stack }) => (
                     <Box key={title} w={{ base: '100%', md: 'calc(50% - 1rem)', xl: 'calc(33.333% - 1.334rem)' }} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
@@ -120,22 +137,6 @@ function ContractServices() {
                     </Box>
                 ))}
             </Flex>
-
-            <Text as='h3' fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold' px='4' pt='14' pb='6'>Faster than the system it replaced</Text>
-            <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
-                {openTimeHighlights.map(({ icon: HighlightIcon, headline, description }) => (
-                    <Box key={headline} w={{ base: '100%', lg: 'calc(33.333% - 1.334rem)' }} rounded='10px' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' px='4' py='6'>
-                        <Flex justify='center' pb='3' color={isDark ? 'orange.300' : 'orange.600'}>
-                            <HighlightIcon size={isNotSmallerScreen ? '2.5em' : '2em'} aria-hidden='true' focusable='false'/>
-                        </Flex>
-                        <Text fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='bold' color={isDark ? 'orange.300' : 'orange.600'} pb='2'>{headline}</Text>
-                        <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left'>{description}</Text>
-                    </Box>
-                ))}
-            </Flex>
-            <Text fontSize='sm' color={isDark ? 'gray.400' : 'gray.600'} maxW='1000px' mx='auto' px='4' pt='4'>
-                Old and rebuilt systems timed opening the same large records on a shared test database: median of ten opens each, November 2026.
-            </Text>
 
             <Flex direction='column' align='center' gap='4' pt='10' px={isNotSmallerScreen ? "8" : "2"}>
                 <Text fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold'>Have a project that needs a senior full stack developer?</Text>
