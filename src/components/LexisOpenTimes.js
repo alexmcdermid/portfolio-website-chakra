@@ -71,11 +71,13 @@ function LexisOpenTimes() {
                         <Text fontWeight='bold' color={isDark ? 'orange.300' : 'orange.600'}>{headline}</Text>
                     </Flex>
                     {records.map(({ size, legacySeconds, rebuiltSeconds }) => (
-                        <Box key={size} pt='2'>
-                            <Text fontSize='sm' color={mutedTextColor}>{size}</Text>
-                            <SecondsBar systemName='Legacy LEXIS' seconds={legacySeconds} barColor={legacyBarColor}/>
-                            <SecondsBar systemName='Rebuilt LEXIS' seconds={rebuiltSeconds} barColor={rebuiltBarColor}/>
-                        </Box>
+                        <Flex key={size} pt='2' direction={{ base: 'column', md: 'row' }} align={{ base: 'stretch', md: 'center' }} columnGap='4'>
+                            <Text fontSize='sm' color={mutedTextColor} w={{ md: '170px' }} flexShrink='0'>{size}</Text>
+                            <Box flex='1' minW='0'>
+                                <SecondsBar systemName='Legacy LEXIS' seconds={legacySeconds} barColor={legacyBarColor}/>
+                                <SecondsBar systemName='Rebuilt LEXIS' seconds={rebuiltSeconds} barColor={rebuiltBarColor}/>
+                            </Box>
+                        </Flex>
                     ))}
                 </Box>
             ))}
