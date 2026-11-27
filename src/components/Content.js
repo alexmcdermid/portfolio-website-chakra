@@ -1,5 +1,5 @@
 import { useColorMode } from '@chakra-ui/color-mode'
-import { Stack, Flex, Box, Text, Link } from '@chakra-ui/layout';
+import { Stack, Flex, Box, Text, Link, AspectRatio } from '@chakra-ui/layout';
 import { Button, IconButton } from '@chakra-ui/button';
 import { Image } from '@chakra-ui/react/dist/chakra-ui-react.cjs';
 import YouTube from 'react-youtube';
@@ -64,6 +64,7 @@ function Content() {
     const [isWideScreen] = useMediaQuery("(min-width:768px)");
     const opts = {
         width: '100%',
+        height: '100%',
         playerVars: {
           // https://developers.google.com/youtube/player_parameters
           autoplay: 0,
@@ -164,16 +165,16 @@ function Content() {
                     <Text fontSize={isNotSmallerScreen ? "xl" : "lg"} color={isDark ? "gray.200" : "gray.700"} maxW='1000px' mx='auto' px='4' pb='8'>These projects are no longer actively maintained, but they remain deployed and available to explore.</Text>
 
                     <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' >
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Railestate</Text>
                             <Flex justify='center' align='center' gap={isNotSmallerScreen ? '8' : '4'}>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/railestate" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                                 <IconButton as='a' href="https://railestate.herokuapp.com/" target='_blank' rel='noopener noreferrer' aria-label='Open Railestate website' icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' />
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
-                            <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="gyEO1cZ-QXk" opts={opts}/></AspectRatio>
                         </Box>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Grok the Coding Interview Randomizer</Text>
                             <Flex justify='center' align='center' gap={isNotSmallerScreen ? '8' : '4'}>
                                 <Button as='a' href="https://github.com/alexmcdermid/grokkingTheCodingInterviewRandomizer" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
@@ -190,37 +191,37 @@ function Content() {
                     <Text fontSize={isNotSmallerScreen ? "xl" : "lg"} color={isDark ? "gray.200" : "gray.700"} maxW='1000px' mx='auto' px='4' pb='8'>These projects are no longer deployed. Their repositories and recorded demos remain available if you'd like to explore the work.</Text>
 
                     <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' >
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>IS24 Challenge</Text>
                             <Flex justify='center' align='center'>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>This repository contains a web application that tracks and manages mock Web Applications developed by the Province of BC.</Text>
-                            <YouTube videoId="5EXRuzREMCc"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="5EXRuzREMCc" opts={opts}/></AspectRatio>
                         </Box>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }}  minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl'>
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }}  minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Tigerpins</Text>
                             <Flex justify='center' align='center'>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/tigerpins" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>A full-stack web application that allows users to log places that they’ve been to, and take a look at places that other users have been to. </Text>
-                            <YouTube videoId="IB2bAzOVM7U"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="IB2bAzOVM7U" opts={opts}/></AspectRatio>
                         </Box>
-                        <Box w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl'  >
+                        <Box w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Rhyme Time</Text>
                             <Flex justify='center' align='center'>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/rhymetime" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
-                            <YouTube videoId="ufdOikrghik"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="ufdOikrghik" opts={opts}/></AspectRatio>
                         </Box>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' >
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Brewfinder</Text>
                             <Flex justify='center' align='center'>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/brewfinder" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>A full-stack web application that allows users to search cities to find listings of breweries and comment on their experiences. </Text>
-                            <YouTube videoId="74zDJUpQe9Q"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="74zDJUpQe9Q" opts={opts}/></AspectRatio>
                         </Box>
                     </Flex>
                     
