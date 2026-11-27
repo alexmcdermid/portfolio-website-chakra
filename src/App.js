@@ -11,7 +11,7 @@ function App() {
 
   return (
     <VStack>
-      <Flex w='100%' p='4'>
+      <Flex w='100%' p='4' gap='2'>
         <Heading as='span' m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400'>
           alex.dev 
         </Heading>
@@ -26,7 +26,7 @@ function App() {
       <Heading m1='8' size={isNotSmallerScreen ? 'lg' : 'md'} fontWeight='semibold' color='orange.400' pt=''>
           Contact me
         </Heading>
-      <Flex pb='8'>
+      <Flex pb='8' gap='2'>
         <IconButton as='a' href="https://www.linkedin.com/in/alexmcdermid" target='_blank' rel='noopener noreferrer' aria-label='LinkedIn profile' icon={<FaLinkedin />} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' />
         <IconButton as='a' href="https://www.github.com/alexmcdermid" target='_blank' rel='noopener noreferrer' aria-label='GitHub profile' icon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' />
       </Flex>

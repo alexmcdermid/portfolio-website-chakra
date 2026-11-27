@@ -1,5 +1,5 @@
 import { useColorMode } from '@chakra-ui/color-mode'
-import { Stack, Flex, Box, Text, Link } from '@chakra-ui/layout';
+import { Stack, Flex, Box, Text, Link, AspectRatio } from '@chakra-ui/layout';
 import { Button, IconButton } from '@chakra-ui/button';
 import { Image } from '@chakra-ui/react/dist/chakra-ui-react.cjs';
 import YouTube from 'react-youtube';
@@ -35,6 +35,27 @@ const otherStack = [
     { icon: DiGit, label: 'Git' },
 ]
 
+const blogPosts = [
+    {
+        url: 'https://harled.ca/blog/what_is_ahoy_and_application_level_optimizations',
+        title: 'Ahoy Deep Dive Part 1: What is Ahoy? And Application Level Optimizations',
+        summary: 'An overview of Ahoy and industry standard practices to optimize Ahoy events and visits at the application level.',
+        publishedDate: 'September 16th, 2023',
+    },
+    {
+        url: 'https://harled.ca/blog/database_indexing_strategies',
+        title: 'Ahoy Deep Dive Part 2: Database Indexing Strategies',
+        summary: 'How to optimize Ahoy events and visits at the database and infrastructure levels for performance and scale.',
+        publishedDate: 'September 16th, 2023',
+    },
+    {
+        url: 'https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec',
+        title: 'Rails Testing: The Battle of Factories vs Fixtures when using RSpec',
+        summary: 'A comparison of the pros/cons of using factories vs fixtures for testing Ruby on Rails applications with RSpec.',
+        publishedDate: 'August 18th, 2023',
+    },
+]
+
 function Content() {
 
     const { colorMode } = useColorMode();
@@ -43,6 +64,7 @@ function Content() {
     const [isWideScreen] = useMediaQuery("(min-width:768px)");
     const opts = {
         width: '100%',
+        height: '100%',
         playerVars: {
           // https://developers.google.com/youtube/player_parameters
           autoplay: 0,
@@ -119,76 +141,40 @@ function Content() {
                     <Text as='h2' fontSize="4xl" fontWeight="semibold" pt={{ base: '10', md: '14' }} pb='6'>Blogs</Text>
 
                     <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
-                        <Box w={{ base: '100%', lg: 'calc(50% - 1rem)' }} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl'>
-                            <Link href="https://harled.ca/blog/what_is_ahoy_and_application_level_optimizations" _focus={{ outline: 'none' }} isExternal>
-                                <Flex direction={'column'} justifyContent={'space-between'} height={'100%'} paddingBlockEnd={'.5em'}>
-                                    <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2' sx={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Ahoy Deep Dive Part 1: What is Ahoy? And Application Level Optimizations</Text>
-                                    <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>An overview of Ahoy and industry standard practices to optimize Ahoy events and visits at the application level.</Text>
-                                    <Flex justify={'space-between'} px='4' pb='4'>
+                        {blogPosts.map(({ url, title, summary, publishedDate }) => (
+                            <Box key={url} w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '385px' : undefined} display='flex' rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl'>
+                                <Link href={url} _focus={{ outline: 'none' }} isExternal flex='1' display='flex' flexDirection='column' justifyContent='space-between' pb='.5em'>
+                                    <Text as='h3' fontSize={isNotSmallerScreen ? '3xl' : '2xl'} px='4' pt='4' pb='2'>{title}</Text>
+                                    <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>{summary}</Text>
+                                    <Flex justify='space-between' px='4' pb='4'>
                                         <Flex>
                                             <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledProfile.jpg" alt="Alex McDermid Harled Work Profile Photo"/>
-                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'} textAlign={'start'}>
+                                            <Flex direction='column' justifyContent='center' pl='2%' textAlign='start'>
                                                 <Text fontSize={isNotSmallerScreen ? 'lg' : 'md'} p='1%'>Alex McDermid</Text>
-                                                <Text fontSize={isNotSmallerScreen ? 'lg' : 'md'} p='1%' whiteSpace={{ base: 'normal', md: 'nowrap' }}>September 16th, 2023</Text>
+                                                <Text fontSize={isNotSmallerScreen ? 'lg' : 'md'} p='1%' whiteSpace={{ base: 'normal', md: 'nowrap' }}>{publishedDate}</Text>
                                             </Flex>
                                         </Flex>
                                         <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
                                     </Flex>
-                                </Flex>
-                            </Link>
-                        </Box>
-                        <Box w={{ base: '100%', lg: 'calc(50% - 1rem)' }} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl'  >
-                            <Link href="https://harled.ca/blog/database_indexing_strategies" _focus={{ outline: 'none' }} isExternal>
-                                <Flex direction={'column'} justifyContent={'space-between'} height={'100%'} paddingBlockEnd={'.5em'}>
-                                    <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2' sx={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Ahoy Deep Dive Part 2: Database Indexing Strategies</Text>
-                                    <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>How to optimize Ahoy events and visits at the database and infrastructure levels for performance and scale.</Text>
-                                    <Flex justify={'space-between'} px='4' pb='4'>
-                                        <Flex>
-                                            <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledProfile.jpg" alt="Alex McDermid Harled Work Profile Photo"/>
-                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'} textAlign={'start'}>
-                                                <Text fontSize={isNotSmallerScreen ? 'lg' : 'md'} p='1%'>Alex McDermid</Text>
-                                                <Text fontSize={isNotSmallerScreen ? 'lg' : 'md'} p='1%' whiteSpace={{ base: 'normal', md: 'nowrap' }}>September 16th, 2023</Text>
-                                            </Flex>
-                                        </Flex>
-                                        <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
-                                    </Flex>
-                                </Flex>
-                            </Link>
-                        </Box>
-                        <Box w={{ base: '100%', lg: 'calc(50% - 1rem)' }} h={isNotSmallerScreen ? '385px' : '335px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl'  >
-                            <Link href="https://harled.ca/blog/the_battle_of_factories_vs_fixtures_when_using_rspec" _focus={{ outline: 'none' }} isExternal>
-                                <Flex direction={'column'} justifyContent={'space-between'} height={'100%'} paddingBlockEnd={'.5em'}>
-                                    <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2' sx={{ display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>Rails Testing: The Battle of Factories vs Fixtures when using RSpec</Text>
-                                    <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>A comparison of the pros/cons of using factories vs fixtures for testing Ruby on Rails applications with RSpec.</Text>
-                                    <Flex justify={'space-between'} px='4' pb='4'>
-                                        <Flex>
-                                            <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledProfile.jpg" alt="Alex McDermid Harled Work Profile Photo"/>
-                                            <Flex direction={'column'} justifyContent={'center'} pl={'2%'} textAlign={'start'}>
-                                                <Text fontSize={isNotSmallerScreen ? 'lg' : 'md'} p='1%'>Alex McDermid</Text>
-                                                <Text fontSize={isNotSmallerScreen ? 'lg' : 'md'} p='1%' whiteSpace={{ base: 'normal', md: 'nowrap' }}>August 18th, 2023</Text>
-                                            </Flex>
-                                        </Flex>
-                                        <Image w={isNotSmallerScreen ? '120px' : '80px'} h={isNotSmallerScreen ? '120px' : '80px'} src="harledLogo.jpeg" alt="Harled Inc Logo"/>
-                                    </Flex>
-                                </Flex>
-                            </Link>
-                        </Box>
+                                </Link>
+                            </Box>
+                        ))}
                     </Flex>
 
                     <Text as='h2' fontSize="4xl" fontWeight="semibold" pt={{ base: '10', md: '14' }} pb='6'>Past Projects</Text>
                     <Text fontSize={isNotSmallerScreen ? "xl" : "lg"} color={isDark ? "gray.200" : "gray.700"} maxW='1000px' mx='auto' px='4' pb='8'>These projects are no longer actively maintained, but they remain deployed and available to explore.</Text>
 
                     <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' >
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Railestate</Text>
                             <Flex justify='center' align='center' gap={isNotSmallerScreen ? '8' : '4'}>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/railestate" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                                 <IconButton as='a' href="https://railestate.herokuapp.com/" target='_blank' rel='noopener noreferrer' aria-label='Open Railestate website' icon={<FaGlobe/>} size={isNotSmallerScreen ? 'lg' : 'md'} isRound='true' />
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>Railestate is a Ruby on Rails 7 webapp built to explore built in SPA functionality from the Hotwired suite (Stimulus, Turbo).</Text>
-                            <YouTube videoId="gyEO1cZ-QXk"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="gyEO1cZ-QXk" opts={opts}/></AspectRatio>
                         </Box>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Grok the Coding Interview Randomizer</Text>
                             <Flex justify='center' align='center' gap={isNotSmallerScreen ? '8' : '4'}>
                                 <Button as='a' href="https://github.com/alexmcdermid/grokkingTheCodingInterviewRandomizer" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
@@ -205,37 +191,37 @@ function Content() {
                     <Text fontSize={isNotSmallerScreen ? "xl" : "lg"} color={isDark ? "gray.200" : "gray.700"} maxW='1000px' mx='auto' px='4' pb='8'>These projects are no longer deployed. Their repositories and recorded demos remain available if you'd like to explore the work.</Text>
 
                     <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' >
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>IS24 Challenge</Text>
                             <Flex justify='center' align='center'>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/Alexander-McDermid-ecc-dssb-IS24-code-challenge" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>This repository contains a web application that tracks and manages mock Web Applications developed by the Province of BC.</Text>
-                            <YouTube videoId="5EXRuzREMCc"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="5EXRuzREMCc" opts={opts}/></AspectRatio>
                         </Box>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }}  minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl'>
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }}  minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Tigerpins</Text>
                             <Flex justify='center' align='center'>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/tigerpins" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>A full-stack web application that allows users to log places that they’ve been to, and take a look at places that other users have been to. </Text>
-                            <YouTube videoId="IB2bAzOVM7U"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="IB2bAzOVM7U" opts={opts}/></AspectRatio>
                         </Box>
-                        <Box w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl'  >
+                        <Box w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Rhyme Time</Text>
                             <Flex justify='center' align='center'>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/rhymetime" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>A mobile first, full stack web application, that allows users to search words and be given a list of rhyming words as a result. </Text>
-                            <YouTube videoId="ufdOikrghik"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="ufdOikrghik" opts={opts}/></AspectRatio>
                         </Box>
-                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : '538px'} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' >
+                        <Box  w={{ base: '100%', lg: 'calc(50% - 1rem)' }} minH={isNotSmallerScreen ? '596px' : undefined} rounded='10px' overflow='hidden' boxShadow='md' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' display='flex' flexDirection='column'>
                             <Text as='h3' fontSize='3xl' px='4' pt='4' pb='2'>Brewfinder</Text>
                             <Flex justify='center' align='center'>
                                 <Button as='a' href="https://www.github.com/alexmcdermid/brewfinder" target='_blank' rel='noopener noreferrer' leftIcon={<FaGithub/>} size={isNotSmallerScreen ? 'lg' : 'md'}>GitHub</Button>
                             </Flex>
                             <Text fontSize={isNotSmallerScreen ? 'xl' : 'lg'} textAlign='left' px='4' pt='2' pb='4'>A full-stack web application that allows users to search cities to find listings of breweries and comment on their experiences. </Text>
-                            <YouTube videoId="74zDJUpQe9Q"  opts={opts}/>
+                            <AspectRatio ratio={16 / 9} mt='auto'><YouTube videoId="74zDJUpQe9Q" opts={opts}/></AspectRatio>
                         </Box>
                     </Flex>
                     
