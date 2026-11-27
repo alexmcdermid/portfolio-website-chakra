@@ -7,11 +7,12 @@ import { SiSpringboot, SiReact, SiOracle, SiOpenid, SiJsonwebtokens, SiKong, SiS
 import { FaKey, FaUserShield, FaLock, FaCode, FaCubes, FaBell, FaBook, FaShieldAlt, FaFileUpload, FaLinkedin, FaGithub } from 'react-icons/fa'
 import React from 'react'
 
-// Broad takeaways from timing legacy and rebuilt LEXIS opening the same records (TEST, November 2026).
+// From timing legacy and rebuilt LEXIS opening the same ten large records (TEST, November 2026):
+// largest record 10.43 s to 0.78 s; median per-record reduction 66%; rebuilt opens 0.56-1.16 s.
 const openTimeHighlights = [
-    { headline: 'Up to 13× faster', description: 'The largest exemptions now open in under a second, where legacy LEXIS took more than ten.' },
-    { headline: 'Steady as records grow', description: 'Legacy LEXIS slowed down as records grew. The rebuilt app holds steady: exemptions open in under 0.8 s whether they link 11 or 81 applications.' },
-    { headline: 'Faster where it was slow', description: 'Every exemption, permit, and application tested opened faster. Offers already opened almost instantly in both systems.' },
+    { headline: 'Up to 13× faster', description: 'The heaviest pages, records with dozens of linked items, now load in under a second instead of more than ten.' },
+    { headline: 'Two-thirds less waiting', description: 'Across the core record pages, including applications and permits, large records load in about a third of the time they used to.' },
+    { headline: 'Fast at any size', description: 'The old system slowed down as records grew. The rebuilt one stays at about a second or less, whether a record links to a dozen items or more than 80.' },
 ]
 
 const workstreams = [
@@ -120,7 +121,7 @@ function ContractServices() {
                 ))}
             </Flex>
 
-            <Text as='h3' fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold' px='4' pt='14' pb='6'>Measured against legacy LEXIS</Text>
+            <Text as='h3' fontSize={isNotSmallerScreen ? '2xl' : 'xl'} fontWeight='semibold' px='4' pt='14' pb='6'>Faster than the system it replaced</Text>
             <Flex wrap='wrap' justify='center' align='stretch' gap='8' w='100%' maxW='1280px' mx='auto' px='4' textAlign='center'>
                 {openTimeHighlights.map(({ headline, description }) => (
                     <Box key={headline} w={{ base: '100%', lg: 'calc(33.333% - 1.334rem)' }} rounded='10px' bg={isDark ? 'gray.700' : 'gray.200'} shadow='xl' px='4' py='6'>
@@ -130,7 +131,7 @@ function ContractServices() {
                 ))}
             </Flex>
             <Text fontSize='sm' color={isDark ? 'gray.400' : 'gray.600'} maxW='1000px' mx='auto' px='4' pt='4'>
-                Both systems timed opening the same records on a shared test database: median of ten opens per record, November 2026.
+                Old and rebuilt systems timed opening the same large records on a shared test database: median of ten opens each, November 2026.
             </Text>
 
             <Flex direction='column' align='center' gap='4' pt='10' px={isNotSmallerScreen ? "8" : "2"}>
